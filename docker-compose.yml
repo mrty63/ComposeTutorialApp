@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+
+    webapp:
+        image: ${DOCKER_REGISTRY-}webapp
+        build:
+            context: .
+            dockerfile: WebApp/Dockerfile
+
+    webapi:
+        image: ${DOCKER_REGISTRY-}webapi
+        build:
+            context: .
+            dockerfile: WebApi/Dockerfile
+
+    redis:
+        image: redis
+        container_name: redis_api_compose
+        ports:
+            - "6379:6379"
