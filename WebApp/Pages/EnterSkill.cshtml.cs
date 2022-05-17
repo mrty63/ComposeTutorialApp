@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 
 
+
 namespace WebApp.Pages
 {
     public class EnterSkillModel : PageModel
@@ -44,22 +45,20 @@ namespace WebApp.Pages
                 var skillStringJson2 = JsonSerializer.Serialize(skillStringPlain);
                 Console.WriteLine(skillStringJson2);
                 Console.WriteLine();
+
+                HttpContent cnt= new FormUrlEncodedContent(new[]
+                {
+                    new KeyValuePair<string, string>(name, exp)
+                });
                 if (name != null && exp != null)
                 {
                     var request1 = new System.Net.Http.HttpRequestMessage();
-                    //request1.RequestUri = new Uri($"http://webapi/Skills/CreateSkill/");
                     var reqURI = new Uri($"http://webapi/Skills/CreateSkill/");
-                    //request1.Content = new StringContent(skillString);
-                    var reqContent = new StringContent(skillStringPlain);
-                    var reqContent2 = (HttpContent)reqContent;
-                    var reqContent3 = new StringContent(skillStringJson, Encoding.UTF8, "application/json");
-                    var reqContent4 = new StringContent(skillStringPlain, Encoding.UTF8, "text/plain");
-                    var reqContent5 = new StringContent(skillStringPlain, Encoding.ASCII, "text/plain");
-                    request1.Content = reqContent3;
-                    request1.Method = HttpMethod.Post;
-                    var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringPlain);
-                    //var response3 = await client.SendAsync(request1);
-                    //var a_name  = await client.PostAsync(reqURI, reqContent3);
+
+                    var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringJson);
+                    //var response2 = await client.PostAsync("http://webapi/Skills/CreateSkill/", cnt);
+                    //var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringPlain);
+
                 }
 
 

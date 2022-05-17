@@ -51,15 +51,29 @@ namespace WebApi.Controllers
         [HttpPost("CreateSkill")]
         public ActionResult<Skill> CreateSkillForm([FromBody]string skillString)
         {
-
+            Console.WriteLine(skillString);
+            Skill jstr = JsonSerializer.Deserialize<Skill>(skillString);
             //var s1 = JsonSerializer.Deserialize(skillString);
-            var t1 = skillString.Split(',');
-            Console.WriteLine(t1[0]);
-            var skill = new Skill { m_name = t1[0], m_exp = t1[1] };
+            //var t1 = skillString.Split(',');
+            ///Console.WriteLine(t1[0]);
+            //var skill = new Skill { m_name = t1[0], m_exp = t1[1] };
+            var skill = jstr;
             m_repo.createSkill(skill);
             return CreatedAtRoute(nameof(GetSkillbyName), new { name = skill.m_name, skill });
         }
-        
+
+        [HttpGet("GetAllSkills")]
+        public ActionResult GetAllSkills()
+        {
+            var sks = m_repo.GetAllSkills();
+
+
+            return Content(sks);
+
+            
+            
+            //return null;
+        }
 
     }
 }

@@ -1,0 +1,21 @@
+﻿@page
+@model WebApp.Pages.ListAllSkillsModel
+<h4>List of Skills</h4>
+<p>pulled from a containerised redis instance</p>
+
+
+@{
+    var jsonStr = Model.GetSkills().Result;
+    // List<Skill> skL = JsonSerialiser.Deserialise(jsonStr);
+    foreach (var entry in jsonStr)
+            {
+        <div class="card mb-2" style="width: 60%">
+            <div class="card-body" >
+                <h4 class="card-header"> @entry.m_name</h4>
+                <p class="card-text">@entry.m_exp years</p>
+
+            </div>
+        </div>
+
+            }
+}

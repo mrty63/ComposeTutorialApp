@@ -12,6 +12,6 @@ namespace WebApi.Data
         //Skill? GetSkillByName(string name);
         string? GetSkillByName(string name);
         bool CheckHelloExists();
-        //IEnumerable<Skill> GetAllSkills();
+        string GetAllSkills();
     }
 }
