@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using WebApi.Data;
 using WebApi.Models;
@@ -47,5 +48,18 @@ namespace WebApi.Controllers
             m_repo.createSkill(skill);
             return CreatedAtRoute(nameof(GetSkillbyName), new { name = skill.m_name, skill });
         }
+        [HttpPost("CreateSkill")]
+        public ActionResult<Skill> CreateSkillForm([FromBody]string skillString)
+        {
+
+            //var s1 = JsonSerializer.Deserialize(skillString);
+            var t1 = skillString.Split(',');
+            Console.WriteLine(t1[0]);
+            var skill = new Skill { m_name = t1[0], m_exp = t1[1] };
+            m_repo.createSkill(skill);
+            return CreatedAtRoute(nameof(GetSkillbyName), new { name = skill.m_name, skill });
+        }
+        
+
     }
 }

@@ -1,0 +1,27 @@
+﻿@page
+@model WebApp.Pages.EnterSkillModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    string yrsOfExp = "years-of experience";
+}
+
+<p>Enter a New Skill</p>
+
+<form method="post" class="col-md-5" >
+    <label for="name" class="control-label">Skill Name</label>
+    <div >
+        <input type="text" class="form-control" name="name" />
+    </div>    
+    @*<label for="exp" class="col-sm-2 control-label">Experience</label>*@
+    <br />
+    <div >
+        <label for="exp">Experience</label>
+        <input type="text" class="form-control"  placeholder=@yrsOfExp name="exp">
+    </div>
+    <br />
+    <div class="col-sm-5">
+        <input type="submit" />
+    </div>
+</form>
+
+
