@@ -13,12 +13,12 @@ namespace WebApi.Data
     {
         private readonly ConnectionMultiplexer m_redis;
         private IDatabase m_db;
-        
+        private static int serverId = 1;
 
         public RedisSkillRepo(ConnectionMultiplexer redis)
         {
             m_redis = redis;
-            m_db = m_redis.GetDatabase();
+            m_db = m_redis.GetDatabase(serverId);
 
         }
         void ISkillRepo.createSkill(Skill skill)
@@ -69,7 +69,7 @@ namespace WebApi.Data
         {
             List<Skill> listSkills = new List<Skill>();
             {
-                var keys = m_redis.GetServer("redis", 6379).Keys();
+                var keys = m_redis.GetServer("redis", 6379).Keys(serverId);
                 foreach(var key in keys)
                 {
                     listSkills.Add(new Skill { m_name = key.ToString(), m_exp = m_db.StringGet(key) });
