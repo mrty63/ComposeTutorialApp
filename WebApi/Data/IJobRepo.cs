@@ -10,5 +10,6 @@ namespace WebApi.Data
     {
         public void CreateJob(Job inputJob);
         public string? GetJobById(int id);
+        public int CountExistingJobs();
     }
 }

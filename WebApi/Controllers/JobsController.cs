@@ -38,11 +38,9 @@ namespace WebApi.Controllers
         {
             Console.WriteLine(jobString);
             Job jstr = JsonSerializer.Deserialize<Job>(jobString);
-            //var s1 = JsonSerializer.Deserialize(skillString);
-            //var t1 = skillString.Split(',');
-            ///Console.WriteLine(t1[0]);
-            //var skill = new Skill { m_name = t1[0], m_exp = t1[1] };
-            //var jo = jstr;
+            
+
+            jstr.m_id = m_repo.CountExistingJobs();
             
             m_repo.CreateJob(jstr);
             Console.WriteLine($"Created job {jstr.m_id} at company {jstr.m_company}");

@@ -41,5 +41,10 @@ namespace WebApi.Data
             }
             return res;
         }
+        int IJobRepo.CountExistingJobs()
+        {
+            return m_redis.GetServer(Constants.redisHost,Constants.redisPort).Keys(Constants.serverIdJob).Count();
+            
+        }
     }
 }
