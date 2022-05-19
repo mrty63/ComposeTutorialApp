@@ -37,6 +37,7 @@ namespace WebApi
             ConnectionMultiplexer.Connect(Configuration.GetConnectionString("DockerRedisConnection")));
 
             services.AddScoped<ISkillRepo, RedisSkillRepo>();
+            services.AddScoped<IJobRepo, RedisJobRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

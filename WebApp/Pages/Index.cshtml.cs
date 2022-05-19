@@ -5,7 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Json;
+using System.Text.Json;
 using System.Threading.Tasks;
+
 
 namespace WebApp.Pages
 {
@@ -20,7 +23,7 @@ namespace WebApp.Pages
             m_logger = logger;
             m_clientFactory = clientFactory;
         }
-        
+
         public async Task OnGet()
         {
             //string redisQuery = "hello";
@@ -65,6 +68,42 @@ namespace WebApp.Pages
 
             //    //request.RequestUri = new Uri("http://webapi/Skills/");
             //}
+
+            using (var client = m_clientFactory.CreateClient())
+            {
+                Job skTemp = new Job { m_id = 0, 
+                    m_company = "company",
+                    m_title = "title",
+                    m_start = DateTime.Now,
+                    m_end = DateTime.Now};
+                var jobstringJson = JsonSerializer.Serialize(skTemp);
+               /// string skillStringPlain = $"{name},{exp}";
+                Console.WriteLine(jobstringJson);
+                //var skillStringJson2 = JsonSerializer.Serialize(skillStringPlain);
+                //Console.WriteLine(jobstringJson);
+                Console.WriteLine();
+
+                
+                //if (name != null && exp != null)
+                {
+                    var request1 = new System.Net.Http.HttpRequestMessage();
+                    var reqURI = new Uri($"http://webapi/Jobs/CreateJob/");
+
+                    var response = await client.PostAsJsonAsync(reqURI.ToString(), jobstringJson);
+                    //var response2 = await client.PostAsync("http://webapi/Skills/CreateSkill/", cnt);
+                    //var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringPlain);
+
+                }
+            }
+        }
+        class Job
+        {
+            public int m_id { get; set; }
+            public string m_title { get; set; }
+            public string m_company { get; set; }
+            public DateTime m_start { get; set; }
+            public DateTime? m_end { get; set; }
         }
     }
+    
 }

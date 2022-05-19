@@ -20,7 +20,7 @@ namespace WebApi.Controllers
             m_repo = repo;
         }
 
-        [HttpGet("{name}", Name = "GetSkillbyName")]
+        [HttpGet("{name}", Name = "GetJobByName")]
         public ActionResult<string> GetSkillbyName(string name)
         {
             var skill = m_repo.GetSkillByName(name);
