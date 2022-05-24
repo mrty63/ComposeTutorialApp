@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using CV;
 
 namespace WebApp.Pages
 {
@@ -24,21 +25,34 @@ namespace WebApp.Pages
         }
         public async Task<List<Skill>>GetSkills()
         {
-            string strResult;
+            string strResult =null;
             using (var client = m_clientFactory.CreateClient())
             {
                 var request = new System.Net.Http.HttpRequestMessage();
                 string uriString = "http://webapi/Skills/GetAllSkills";
                 request.RequestUri = new Uri(uriString);
                 //var response1 = await client.SendAsync(request);
-                var response2 = await client.GetAsync(uriString);
+                HttpResponseMessage response2 =null;
+                response2 = await client.GetAsync(uriString);
+               
                 strResult = await response2.Content.ReadAsStringAsync();
 
+                
+                
 
             }
 
             List<Skill> lRes = JsonSerializer.Deserialize<List<Skill>>(strResult);
-            return lRes;
+            if(strResult == null || lRes.Count == 0)
+            {
+                return null;
+            }
+            else
+            {
+
+                return lRes;
+            }
+            
 
         }
     }

@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 using System.Web.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
-
-
+using CV;
+using Serilog;
 
 namespace WebApp.Pages
 {
@@ -26,19 +25,40 @@ namespace WebApp.Pages
         }
         public void OnGet()
         {
+            
         }
 
-        public async Task<IActionResult> OnPostAsync(string name,string exp)
+        //public async Task<IActionResult> OnPostAsync(string name,string exp)
+        public IActionResult OnPostAsync(string name,string exp)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
+            try
+            {
+                EnterSkill(name, exp);
+
+            }
+            catch (Exception e)
+            {
+                Log.Logger.Error($"exception: {e.GetType()}");
+                throw e;
+            }
+
+
+
+            return RedirectToPage("./Index");
+        }
+
+        private async void EnterSkill(string name, string exp)
+        {
+            
             using (var client = m_clientFactory.CreateClient())
             {
                 Console.WriteLine($"input name  : {name}");
                 Console.WriteLine($"input exp   : {exp}");
-                Skill skTemp = new Skill { m_name = name, m_exp = exp };
+                Skill skTemp = new() { m_name = name, m_exp = exp };
                 var skillStringJson = JsonSerializer.Serialize(skTemp);
                 string skillStringPlain = $"{name},{exp}";
                 Console.WriteLine(skillStringJson);
@@ -46,32 +66,23 @@ namespace WebApp.Pages
                 Console.WriteLine(skillStringJson2);
                 Console.WriteLine();
 
-                HttpContent cnt= new FormUrlEncodedContent(new[]
-                {
-                    new KeyValuePair<string, string>(name, exp)
-                });
+
                 if (name != null && exp != null)
                 {
                     var request1 = new System.Net.Http.HttpRequestMessage();
                     var reqURI = new Uri($"http://webapi/Skills/CreateSkill/");
 
                     var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringJson);
-                    //var response2 = await client.PostAsync("http://webapi/Skills/CreateSkill/", cnt);
-                    //var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringPlain);
-
+                    if(response.IsSuccessStatusCode)
+                    {
+                         Log.Logger.Debug($"skill    {name} successfully created in redis");
+                    }
                 }
 
 
             }
-                
-
-            return RedirectToPage("./Index");
         }
     }
-    public class Skill
-    {
-        public string m_name { get; set; }
-        public string m_exp { get; set; }
-    }   
+       
 }
 

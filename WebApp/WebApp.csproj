@@ -8,12 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <Compile Remove="NewFolder2\**" />
+    <Compile Remove="NewFolder\**" />
     <Compile Remove="wwwroot\NewFolder1\**" />
     <Compile Remove="wwwroot\NewFolder\**" />
+    <Content Remove="NewFolder1\**" />
+    <Content Remove="NewFolder2\**" />
+    <Content Remove="NewFolder\**" />
     <Content Remove="wwwroot\NewFolder1\**" />
     <Content Remove="wwwroot\NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder2\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
     <EmbeddedResource Remove="wwwroot\NewFolder1\**" />
     <EmbeddedResource Remove="wwwroot\NewFolder\**" />
+    <None Remove="NewFolder1\**" />
+    <None Remove="NewFolder2\**" />
+    <None Remove="NewFolder\**" />
     <None Remove="wwwroot\NewFolder1\**" />
     <None Remove="wwwroot\NewFolder\**" />
   </ItemGroup>
@@ -29,11 +41,23 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.8" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="6.0.5" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+    <PackageReference Include="Polly.Contrib.WaitAndRetry" Version="1.1.1" />
+    <PackageReference Include="Serilog" Version="2.11.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+    <PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Images\" />
     <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CV2\CV2\CV2.csproj" />
   </ItemGroup>
 
 </Project>

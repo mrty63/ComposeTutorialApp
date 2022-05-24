@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApi.Models;
+using CV;
 using WebApi;
 using System.Text.Json;
 
@@ -12,11 +12,14 @@ namespace WebApi.Data
     public class RedisJobRepo : IJobRepo
     {
         private readonly ConnectionMultiplexer m_redis;
+
         private IDatabase m_db;
+        //Logger m_log;
         public RedisJobRepo(ConnectionMultiplexer redis)
         {
             m_redis = redis;
             m_db = m_redis.GetDatabase(Constants.serverIdJob);
+            //m_log = log;
         }
 
         void IJobRepo.CreateJob(Job inputJob)

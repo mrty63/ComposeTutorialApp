@@ -7,15 +7,33 @@
 @{
     var jsonStr = Model.GetSkills().Result;
     // List<Skill> skL = JsonSerialiser.Deserialise(jsonStr);
-    foreach (var entry in jsonStr)
-            {
-        <div class="card mb-2" style="width: 60%">
-            <div class="card-body" >
-                <h4 class="card-header"> @entry.m_name</h4>
-                <p class="card-text">@entry.m_exp years</p>
+    if (jsonStr != null)
+    {
+        foreach (var entry in jsonStr)
+        {
+            <div class="card mb-2" style="width: 60%">
+                <div class="card-body">
+                    <h4 class="card-header"> @entry.m_name</h4>
+                    <p class="card-text">@entry.m_exp years</p>
 
+                </div>
             </div>
-        </div>
 
-            }
+        }
+    }
+    else
+    {
+        <div class="card mb-2" style="width: 60%">
+                <div class="card-body">
+                    <h4 class="card-header"> No Skills Entered</h4>
+                    <p class="card-text"></p>
+
+                </div>
+            </div> 
+    }
+
+
+
 }
+
+

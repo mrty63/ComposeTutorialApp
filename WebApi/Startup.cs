@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+//using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using StackExchange.Redis;
 using System;
@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Data;
+using Serilog;
+using Serilog.Core;
 
 namespace WebApi
 {
@@ -36,9 +38,11 @@ namespace WebApi
             services.AddSingleton<ConnectionMultiplexer>(opt =>
             ConnectionMultiplexer.Connect(Configuration.GetConnectionString("DockerRedisConnection")));
 
+            //services.AddSingleton<ILogger,Logger>();
             services.AddScoped<ISkillRepo, RedisSkillRepo>();
             services.AddScoped<IJobRepo, RedisJobRepo>();
         }
+       
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,6 +53,7 @@ namespace WebApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApi v1"));
             }
+            
 
             app.UseRouting();
 

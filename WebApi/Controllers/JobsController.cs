@@ -2,10 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using WebApi.Data;
-using WebApi.Models;
+using CV;
 
 namespace WebApi.Controllers
 {
@@ -44,9 +45,17 @@ namespace WebApi.Controllers
             
             m_repo.CreateJob(jstr);
             Console.WriteLine($"Created job {jstr.m_id} at company {jstr.m_company}");
-            return CreatedAtRoute(nameof(CreateJob), new { name = jstr.m_id, jstr });
+            return Created("./index", true);
+
+            //return CreatedAtRoute(nameof(CreateJob), new { name = jstr.m_id, jstr });
         }
 
-       
+        [HttpGet("Ping")]
+        public  ActionResult Ping()
+        {
+           return Ok("pong");
+        }
+
+
     }
 }

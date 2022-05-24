@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using WebApi.Data;
-using WebApi.Models;
-
+//using WebApi.Models;
+using CV;
 namespace WebApi.Controllers
 {
     [Route("[controller]")]
@@ -51,7 +51,7 @@ namespace WebApi.Controllers
         [HttpPost("CreateSkill")]
         public ActionResult<Skill> CreateSkillForm([FromBody]string skillString)
         {
-            Console.WriteLine(skillString);
+            //Console.WriteLine(skillString);
             Skill jstr = JsonSerializer.Deserialize<Skill>(skillString);
             //var s1 = JsonSerializer.Deserialize(skillString);
             //var t1 = skillString.Split(',');
@@ -59,7 +59,9 @@ namespace WebApi.Controllers
             //var skill = new Skill { m_name = t1[0], m_exp = t1[1] };
             var skill = jstr;
             m_repo.createSkill(skill);
-            return CreatedAtRoute(nameof(GetSkillbyName), new { name = skill.m_name, skill });
+            //return CreatedAtRoute(nameof(GetSkillbyName), new { name = skill.m_name, skill });
+            return Created("Skills/GetAllSkills",true);
+            //return Ok();
         }
 
         [HttpGet("GetAllSkills")]
@@ -73,6 +75,12 @@ namespace WebApi.Controllers
             
             
             //return null;
+        }
+        [HttpGet("Ping")]
+        public ActionResult<string> Ping()
+        {
+            
+            return Ok("pong");
         }
 
     }

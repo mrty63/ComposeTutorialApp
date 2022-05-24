@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,7 @@ namespace WebApp.Pages
 
         public async Task OnGet()
         {
+            
             //string redisQuery = "hello";
 
             ////ViewData["Message"] = "Hello from  default webfrontend";
@@ -69,32 +72,62 @@ namespace WebApp.Pages
             //    //request.RequestUri = new Uri("http://webapi/Skills/");
             //}
 
-            using (var client = m_clientFactory.CreateClient())
+            //using (var client = m_clientFactory.CreateClient())
             {
-                Job skTemp = new Job { m_id = 0, 
-                    m_company = "company",
-                    m_title = "title",
-                    m_start = DateTime.Now,
-                    m_end = DateTime.Now};
-                var jobstringJson = JsonSerializer.Serialize(skTemp);
-               /// string skillStringPlain = $"{name},{exp}";
-                Console.WriteLine(jobstringJson);
-                //var skillStringJson2 = JsonSerializer.Serialize(skillStringPlain);
-                //Console.WriteLine(jobstringJson);
-                Console.WriteLine();
+                //    Job skTemp = new Job { m_id = 0, 
+                //        m_company = "company",
+                //        m_title = "title",
+                //        m_start = DateTime.Now,
+                //        m_end = DateTime.Now};
+                //    var jobstringJson = JsonSerializer.Serialize(skTemp);
+                //   /// string skillStringPlain = $"{name},{exp}";
+                //    Console.WriteLine(jobstringJson);
+                //    //var skillStringJson2 = JsonSerializer.Serialize(skillStringPlain);
+                //    //Console.WriteLine(jobstringJson);
+                //    Console.WriteLine();
 
+
+                //    //if (name != null && exp != null)
+                //    {
+                //        var request1 = new System.Net.Http.HttpRequestMessage();
+                //        var reqURI = new Uri($"http://webapi/Jobs/CreateJob/");
+
+                //        var response = await client.PostAsJsonAsync(reqURI.ToString(), jobstringJson);
+                //        //var response2 = await client.PostAsync("http://webapi/Skills/CreateSkill/", cnt);
+                //        //var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringPlain);
                 
-                //if (name != null && exp != null)
-                {
-                    var request1 = new System.Net.Http.HttpRequestMessage();
-                    var reqURI = new Uri($"http://webapi/Jobs/CreateJob/");
 
-                    var response = await client.PostAsJsonAsync(reqURI.ToString(), jobstringJson);
-                    //var response2 = await client.PostAsync("http://webapi/Skills/CreateSkill/", cnt);
-                    //var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringPlain);
-
-                }
+                //    }
             }
+            //var pingURI = new Uri($"http://webapi/Jobs/Ping/");
+
+            //var pingResponse = await client. (pingURI.ToString(), jobstringJson);
+            Ping();
+        }
+        private async void Ping()
+        {
+            await SkillsPing();
+            await JobsPing();
+        }
+        private async Task<int> JobsPing()
+        {
+            var client = m_clientFactory.CreateClient();
+            var pingURI = new Uri($"http://webapi/Jobs/Ping/"); ;
+            //HttpResponse pingResponse = null;
+            var pingResponse = await client.GetAsync(pingURI.ToString());
+            Log.Logger.Information($"Ping Jobs Controler :   {pingResponse.Content.ReadAsStringAsync().Result}");
+            Log.Logger.Information($"Ping Response code :   {pingResponse.StatusCode}");
+            return 0;
+        }
+        private async Task<int> SkillsPing()
+        {
+            var client = m_clientFactory.CreateClient();
+            var pingURI = new Uri($"http://webapi/Skills/Ping/"); ;
+            var pingResponse = await client.GetAsync(pingURI.ToString());
+            Log.Logger.Information($"Ping Skills Controler  :   {pingResponse.Content.ReadAsStringAsync().Result}");
+            Log.Logger.Information($"Ping Response code     :   {pingResponse.StatusCode}");
+            
+            return 0;
         }
         class Job
         {
