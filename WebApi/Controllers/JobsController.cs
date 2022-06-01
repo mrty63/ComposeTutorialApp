@@ -53,7 +53,8 @@ namespace WebApi.Controllers
         [HttpGet("Ping")]
         public  ActionResult Ping()
         {
-           return Ok("pong");
+            return Ok("pong");
+            //return Problem();
         }
 
 

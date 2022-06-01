@@ -43,7 +43,7 @@ namespace WebApp.Pages
             catch (Exception e)
             {
                 Log.Logger.Error($"exception: {e.GetType()}");
-                throw e;
+                //throw e;
             }
 
 

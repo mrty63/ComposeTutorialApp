@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Polly;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -10,7 +12,8 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
-
+using WebApp.Chaos;
+using WebApp.Extensions;
 
 namespace WebApp.Pages
 {
@@ -18,59 +21,43 @@ namespace WebApp.Pages
     {
         private readonly ILogger<IndexModel> m_logger;
         private readonly IHttpClientFactory m_clientFactory;
+        private readonly AppChaosSettings m_chaosSettings;
+        private readonly ResilientHttpClient m_r_client;
+        private readonly Task<AppChaosSettings> m_generalChaosSettingFactory;
+        private readonly Uri m_jobPingUri;
+        private readonly Uri m_skillsPingUri;
+        private readonly IHttpClientService _httpClient;
 
-
-        public IndexModel(ILogger<IndexModel> logger, IHttpClientFactory clientFactory)
+        public IndexModel(ILogger<IndexModel> logger, IHttpClientService httpClient)
         {
             m_logger = logger;
-            m_clientFactory = clientFactory;
+            // m_clientFactory = clientFactory;
+            _httpClient = httpClient;
+
+            m_jobPingUri = new Uri($"http://webapi/Jobs/Ping/");
+            m_skillsPingUri = new Uri($"http://webapi/Skills/Ping/");
+            //m_r_client = new ResilientHttpClient(m_clientFactory.CreateClient());
+
         }
+        //public IndexModel(ILogger<IndexModel> logger, IHttpClientFactory clientFactory, IOptionsSnapshot<AppChaosSettings> chaosOptionsSnapshot, Lazy<Task<AppChaosSettings>> generalChaosSettingFactory)
+        //{
+        //    m_logger = logger;
+        //    m_clientFactory = clientFactory;
+        //    m_chaosSettings = chaosOptionsSnapshot.Value;
+        //    m_generalChaosSettingFactory = generalChaosSettingFactory.Value;
+        //    m_jobPingUri = new Uri($"http://webapi/Jobs/Ping/");
+        //    m_skillsPingUri = new Uri($"http://webapi/Skills/Ping/");
+        //    m_r_client = new ResilientHttpClient(m_clientFactory.CreateClient());
+
+        //}
 
         public async Task OnGet()
         {
             
-            //string redisQuery = "hello";
-
-            ////ViewData["Message"] = "Hello from  default webfrontend";
-            ////ViewData["Message1Body"] = "weather JSON here";
-            //ViewData["Message2"] = "Key: value";
-            //ViewData["Message2Body"] = $"{redisQuery} : ";
+            
 
 
-            //using (var client = new System.Net.Http.HttpClient())
-            //using (var client =m_clientFactory.CreateClient())
-            //{
-            //    //// Call *webapi*, and display its response in the page
-            //    //var request = new System.Net.Http.HttpRequestMessage();
-            //    //request.RequestUri = new Uri("http://webapi/WeatherForecast");
-            //    ////request.RequestUri = new Uri("http://localhost:6880/WeatherForecast");    //non docker api call
-            //    //var response = await client.SendAsync(request);
-            //    //ViewData["Message1Body"] = await response.Content.ReadAsStringAsync();
-
-            //    var request1 = new System.Net.Http.HttpRequestMessage();
-            //    request1.RequestUri = new Uri($"http://webapi/Skills/");
-            //    var response3 = await client.SendAsync(request1);
-            //    var result = Convert.ToBoolean( await  response3.Content.ReadAsStringAsync() );
-            //    if( result )
-            //    {
-            //        ViewData["Message"] = "Hello already present in redis";
-            //    }
-            //    else
-            //    {
-            //        ViewData["Message"] = "Hello created in redis";
-
-            //    }
-
-            //    var request2 = new System.Net.Http.HttpRequestMessage();
-            //    request2.RequestUri = new Uri($"http://webapi/Skills/{redisQuery}");
-            //    var response2 = await client.SendAsync(request2);
-            //    ViewData["Message2Body"] += await response2.Content.ReadAsStringAsync();
-
-
-
-
-            //    //request.RequestUri = new Uri("http://webapi/Skills/");
-            //}
+           
 
             //using (var client = m_clientFactory.CreateClient())
             {
@@ -102,30 +89,56 @@ namespace WebApp.Pages
             //var pingURI = new Uri($"http://webapi/Jobs/Ping/");
 
             //var pingResponse = await client. (pingURI.ToString(), jobstringJson);
-            Ping();
+            await Ping();
         }
-        private async void Ping()
+        private async Task Ping()
         {
             await SkillsPing();
             await JobsPing();
+            return;
         }
         private async Task<int> JobsPing()
         {
-            var client = m_clientFactory.CreateClient();
-            var pingURI = new Uri($"http://webapi/Jobs/Ping/"); ;
+            //using(var _httpClient = m_clientFactory.CreateClient())
+            //{
+            //    var generalChaosSetting = await m_generalChaosSettingFactory;
+            //    var context = new Context("JobsPing").WithChaosSettings(generalChaosSetting);
+            //    HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Get, m_jobPingUri);
+            //    var response = await m_r_client.SendAsync(req, context);
+
+            //}
+            
+            //old
+            //var client = new ResilientHttpClient(m_clientFactory.CreateClient());
+            //var client = m_clientFactory.CreateClient();
+            var pingURI = new Uri($"http://webapi/Jobs/Ping/");
             //HttpResponse pingResponse = null;
-            var pingResponse = await client.GetAsync(pingURI.ToString());
+            //Context context = new Context(nameof(JobsPing)).WithChaosSettings(chaosSettings);
+            //var pingResponse = await client.GetAsyncUsingContext(pingURI.ToString(),context);
+            var pingResponse = await _httpClient.GetAsync(pingURI.ToString());
             Log.Logger.Information($"Ping Jobs Controler :   {pingResponse.Content.ReadAsStringAsync().Result}");
             Log.Logger.Information($"Ping Response code :   {pingResponse.StatusCode}");
             return 0;
         }
+        
         private async Task<int> SkillsPing()
         {
-            var client = m_clientFactory.CreateClient();
-            var pingURI = new Uri($"http://webapi/Skills/Ping/"); ;
-            var pingResponse = await client.GetAsync(pingURI.ToString());
-            Log.Logger.Information($"Ping Skills Controler  :   {pingResponse.Content.ReadAsStringAsync().Result}");
-            Log.Logger.Information($"Ping Response code     :   {pingResponse.StatusCode}");
+
+            //using (var _httpClient = m_clientFactory.CreateClient())
+            //{
+            //    var generalChaosSetting = await m_generalChaosSettingFactory;
+            //    var context = new Context(nameof(SkillsPing)).WithChaosSettings(generalChaosSetting);
+            //    HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Get, m_skillsPingUri);
+            //    var response = await m_r_client.SendAsync(req, context);
+
+            //}
+            {
+                //var client = m_clientFactory.CreateClient();
+                //var pingResponse = await client.GetAsync(m_skillsPingUri.ToString());
+                var pingResponse = await _httpClient.GetAsync(m_skillsPingUri.ToString());
+                Log.Logger.Information($"Ping Skills Controler  :   {pingResponse.Content.ReadAsStringAsync().Result}");
+                Log.Logger.Information($"Ping Response code     :   {pingResponse.StatusCode}");
+            }
             
             return 0;
         }

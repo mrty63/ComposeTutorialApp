@@ -10,7 +10,6 @@ using System.Text.Json;
 //using System.Threading.Tasks;
 using CV;
 
-using CV;
 namespace WebApp.Pages
 {
     public class AddItemModel : PageModel
@@ -25,7 +24,9 @@ namespace WebApp.Pages
         public string m_start { get; set; }
         [BindProperty]
         public string? m_end { get; set; }
-
+        [BindProperty]
+        public string? m_sk_name { get; set; }
+        public string? m_sk_exp { get; set; }
         public string resultOfPost { get; set; }
         public DateTime resultOfDatePost { get; set; }
 
@@ -43,8 +44,8 @@ namespace WebApp.Pages
             //var companyName = Request.Form["m_company"];
             //var start= Request.Form["m_start"];
             //var end = Request.Form["m_end"];
-            DateTime resultOfDatePost = DateTime.Parse(m_start);
-            resultOfPost = $"{m_title} {m_company} {m_start}";
+            //DateTime resultOfDatePost = DateTime.Parse(m_start);
+            //resultOfPost = $"{m_title} {m_company} {m_start}";
 
             using (var client = m_clientFactory.CreateClient())
             {
@@ -88,7 +89,7 @@ namespace WebApp.Pages
                 
                 if(response.IsSuccessStatusCode)
                 {
-                    return RedirectToPage("./Index");
+                    return RedirectToPage("./AddItem");
                 }
                 else 
                 {

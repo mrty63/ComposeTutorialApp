@@ -8,6 +8,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Polly;
+using Polly.Contrib.Simmy.Behavior;
+using Polly.Contrib.Simmy.Latency;
+using Polly.Contrib.Simmy;
+using Polly.Contrib.Simmy.Outcomes;
+
+
+using Polly.Extensions.Http;
+using Polly.Contrib.WaitAndRetry;
+using Polly.Contrib.Simmy.Utilities;
 
 namespace WebApp
 {
@@ -16,6 +26,17 @@ namespace WebApp
         public static void Main(string[] args)
         {
             long fileSizeLim = 1000000;
+            var isEnabled = true;
+            var chaosPolicy = MonkeyPolicy.InjectLatency(with =>
+                with.Latency(TimeSpan.FromSeconds(5))
+                    .InjectionRate(1)
+                    .Enabled(isEnabled)
+                );
+            var chaosPolicy2 = MonkeyPolicy.InjectBehaviour(with =>
+                with.Behaviour(() => Log.Debug("Chaos Policy two hit"))
+                    .InjectionRate(1)
+                    .Enabled(isEnabled)
+                );
 
             var path = "webAppLog-.txt";
             Log.Logger = new LoggerConfiguration()

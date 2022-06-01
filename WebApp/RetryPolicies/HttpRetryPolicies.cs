@@ -1,0 +1,45 @@
+﻿using Serilog;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+//using Microsoft.Extensions.Logging;
+using Polly;
+using Polly.Retry;
+using System.Net.Http;
+using WebApp.RetryPolicies.Config;
+
+namespace WebApp.RetryPolicies
+{
+    public static class HttpRetryPolicies
+    {
+        public static AsyncRetryPolicy<HttpResponseMessage> GetHttpRetryPolicy(ILogger logger, IRetryPolicyConfig retryPolicyConfig)
+        {
+            return HttpPolicyBuilders.GetBaseBuilder()
+                                          .WaitAndRetryAsync(retryPolicyConfig.RetryCount,
+                                                             ComputeDuration,
+                                                             (result, timeSpan, retryCount, context) =>
+                                                             {
+                                                                 OnHttpRetry(result, timeSpan, retryCount, context, logger);
+                                                             });
+        }
+
+        private static void OnHttpRetry(DelegateResult<HttpResponseMessage> result, TimeSpan timeSpan, int retryCount, Polly.Context context, ILogger logger)
+        {
+            if (result.Result != null)
+            {
+                Log.Error("Request failed with {StatusCode}. Waiting {timeSpan} before next retry. Retry attempt {retryCount}", result.Result.StatusCode, timeSpan, retryCount);
+            }
+            else
+            {
+                Log.Error("Request failed because network failure. Waiting {timeSpan} before next retry. Retry attempt {retryCount}", timeSpan, retryCount);
+            }
+        }
+
+        private static TimeSpan ComputeDuration(int input)
+        {
+            return TimeSpan.FromSeconds(Math.Pow(2, input)) + TimeSpan.FromMilliseconds(new Random().Next(0, 100));
+        }
+    }
+}
+

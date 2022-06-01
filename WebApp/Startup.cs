@@ -9,16 +9,33 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
-using Polly;
 using System.Net.Http;
+using Polly;
 using Polly.Extensions.Http;
 using Polly.Contrib.WaitAndRetry;
+using Polly.Contrib.Simmy;
+using Polly.Registry;
+using Polly.Contrib.Simmy.Behavior;
+using Polly.Contrib.Simmy.Latency;
+using Polly.Contrib.Simmy.Outcomes;
+using WebApp.Chaos;
+using WebApp.Chaos.Extensions;
+
+
+
+using System.Data;
+using System.Net;
+using System.Reflection;
+using WebApp.Extensions;
+//using Duber.Infrastructure.Chaos;
 
 namespace WebApp
 {
     public class Startup
     {
+        const string ResiliencePolicy = "ResiliencePolicy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,48 +46,95 @@ namespace WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var retryPolicy = Policy.Handle<HttpRequestException>()
-            .WaitAndRetryAsync(new[]
-            {
-                TimeSpan.FromSeconds(1),
-                TimeSpan.FromSeconds(5),
-                TimeSpan.FromSeconds(10)
-            });
+            //var retryPolicy = HttpPolicyExtensions
+            //    .HandleTransientHttpError() // HttpRequestException, 5XX and 408
+            //    .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(retryAttempt));
             services.AddRazorPages();
             //services.AddHttpClient();
-            services.AddHttpClient("HttpClient")
-                .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
-                //.AddPolicyHandler(GetRetryPolicy());
-                .AddPolicyHandler(GetJitterRetryPolicy());
+
+            //services.AddPolicyRegistry(new PolicyRegistry
+            //{
+            //    { ResiliencePolicy, GetResiliencePolicy() }
+            //});
+            //services.AddHttpClient<ResilientHttpClient>("HttpClient")
+            //    .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
+            //    .AddPolicyHandler(GetResiliencePolicy());
+            {
+                //var policyRegistry = services.AddPolicyRegistry();
+                //policyRegistry["ResiliencePolicy"] = GetHttpResiliencePolicy();
+
+                //services.AddHttpClient<ResilientHttpClient>()
+                //    .AddPolicyHandler(retryPolicy);
+                //    //.AddPolicyHandlerFromRegistry("ResiliencePolicy");
+
+
+                //services.AddSingleton<ChaosApiHttpClient>();
+                //services.AddChaosApiHttpClient(Configuration);
+                //var cSettings = Configuration.GetSection("ChaosSettings");
+                //services.Configure<AppChaosSettings>(Configuration.GetSection("ChaosSettings"));
+            }
+            
+            services.AddHttpClient<IHttpClientService,HttpClientService>(Constants._faultTolerantHttpClientName)
+                .AddPolicyHandlerApi(Configuration);
+           
+
             services.Configure<CookiePolicyOptions>(options =>
             {
-                // This lambda determines whether user consent for non-essential 
-                // cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
-                // requires using Microsoft.AspNetCore.Http;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+        }
 
+        private IsPolicy GetHttpResiliencePolicy()
+        {
+            var retryCount = 5;
+            var exceptionsAllowedBeforeBreaking = 5;
+            //if (!string.IsNullOrEmpty(configuration["HttpClientRetryCount"]))
+            //{
+            //    retryCount = int.Parse(configuration["HttpClientRetryCount"]);
+            //}
+
+            //var exceptionsAllowedBeforeBreaking = 4;
+            //if (!string.IsNullOrEmpty(configuration["HttpClientExceptionsAllowedBeforeBreaking"]))
+            //{
+            //    exceptionsAllowedBeforeBreaking = int.Parse(configuration["HttpClientExceptionsAllowedBeforeBreaking"]);
+            //}
+
+            // Define a couple of policies which will form our resilience strategy.
+            var policies = HttpPolicyExtensions.HandleTransientHttpError()
+                .RetryAsync(retryCount)
+                .WrapAsync(HttpPolicyExtensions.HandleTransientHttpError()
+                    .CircuitBreakerAsync(exceptionsAllowedBeforeBreaking, TimeSpan.FromSeconds(5)));
+
+            return policies;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             else
             {
+                //var httpPolicyRegistry = app.ApplicationServices.GetRequiredService<IPolicyRegistry<string>>();
+                //httpPolicyRegistry?.AddHttpChaosInjectors();
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
+            //if (env.IsDevelopment())
+            //{
+            //    // Wrap every policy in the policy registry in Simmy chaos injectors.
+            //    var httpPolicyRegistry = app.ApplicationServices.GetRequiredService<IPolicyRegistry<string>>();
+            //    httpPolicyRegistry?.AddHttpChaosInjectors();
+            //}
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
 
             app.UseRouting();
 
@@ -81,36 +145,10 @@ namespace WebApp
                 endpoints.MapRazorPages();
             });
         }
-        private static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
-        {
-            return HttpPolicyExtensions
-              // Handle HttpRequestExceptions, 408 and 5xx status codes
-              .HandleTransientHttpError()
-              // Handle 404 not found
-              .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
-              // Handle 401 Unauthorized
-              .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-              // What to do if any of the above erros occur:
-              // Retry 3 times, each time wait 1,2 and 4 seconds before retrying.
-              .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
-        }
-        private static IAsyncPolicy<HttpResponseMessage> GetJitterRetryPolicy()
-        {
-            //jitter
-            var delay = Backoff.DecorrelatedJitterBackoffV2(medianFirstRetryDelay: TimeSpan.FromSeconds(1), retryCount: 5);
 
-            
-            return HttpPolicyExtensions
-              // Handle HttpRequestExceptions, 408 and 5xx status codes
-              .HandleTransientHttpError()
-              // Handle 404 not found
-              .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
-              // Handle 401 Unauthorized
-              .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-              // What to do if any of the above erros occur:
-              // Retry 3 times, each time wait 1,2 and 4 seconds before retrying.
-                .WaitAndRetryAsync(delay);
-        }
+
+        
+       
     }
     
 }

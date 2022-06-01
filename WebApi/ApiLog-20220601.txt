@@ -1,0 +1,19 @@
+2022-06-01 08:59:42.814 +00:00 [INF] Starting Web Host
+2022-06-01 08:59:44.642 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 08:59:44.657 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 08:59:44.662 +00:00 [INF] Hosting environment: Development
+2022-06-01 08:59:44.664 +00:00 [INF] Content root path: /app
+2022-06-01 08:59:46.508 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 08:59:46.582 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 08:59:46.612 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 08:59:46.959 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 08:59:46.994 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 370.8603ms
+2022-06-01 08:59:47.007 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 08:59:47.013 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - application/json;+charset=utf-8 509.8019ms
+2022-06-01 08:59:47.049 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 08:59:47.058 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 08:59:47.063 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 08:59:47.066 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 08:59:47.070 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.522ms
+2022-06-01 08:59:47.073 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 08:59:47.077 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - application/json;+charset=utf-8 28.2084ms
