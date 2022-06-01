@@ -27,7 +27,7 @@ namespace WebApi.Controllers
             return Ok("pong");
         }
 
-        [HttpPost("CreateJob")]
+        [HttpPost("CreateEducation")]
         public ActionResult<bool> CreateEducation([FromBody] string eduString)
         {
             if(eduString == null)

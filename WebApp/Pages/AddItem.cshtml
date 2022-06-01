@@ -2,9 +2,12 @@
 @model WebApp.Pages.AddItemModel
 @{
 }
-<div class="d-grid gap-2 d-md-block col-6 mx-auto">
-    <div>
-        <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#selectorModal">Enter Job</button>
+<div class="d-grid gap-2 d-md-block align-items-center mx-auto">
+    <div class="flex-lg-column">
+        <div class="text-center">
+            <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#selectorModal">Enter Job</button>
+
+        </div>
 
         <div class="modal fade" id="selectorModal" role="dialog">
             <div class="modal-dialog modal-lg">
@@ -34,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="m-m_end" class="col-sm-2 control-label">Start Date</label>
+                                <label for="m-m_end" class="col-sm-2 control-label">End Date</label>
                                 <div class="col-sm-10">
                                     <input type="date" class="form-control" name="m_jobEnd">
                                 </div>
@@ -63,7 +66,10 @@
         </div>
     </div>
     <div>
-        <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#skillModal">Enter Skill</button>
+        <div class="text-center">
+            <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#skillModal">Enter Skill</button>
+
+        </div>
 
         <div class="modal fade" id="skillModal" role="dialog">
             <div class="modal-dialog modal-lg">
@@ -105,8 +111,10 @@
 
         </div>
     </div>
-    <div>
-        <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#eduModal">Enter Education</button>
+    <div class="flex-lg-column align-self-center">
+        <div class="text-center">
+            <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#eduModal">Enter Education</button>
+        </div>
 
         <div class="modal fade" id="eduModal" role="dialog">
             <div class="modal-dialog modal-lg">
@@ -120,16 +128,30 @@
                         <div class="modal-body">
 
                             <div class="form-group">
-                                <label for="m_sk_name" class="col-sm-4 control-label">Skill Name</label>
+                                <label for="m_edName" class="col-sm-4 control-label">Course Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="m_skName">
+                                    <input type="text" class="form-control" name="m_edName">
                                 </div>
-                                <label for="m_sk_exp" class="col-sm-4 control-label">Skill Experience</label>
+                                <label for="m_edSchool" class="col-sm-4 control-label">Instutuion</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="m_skExp">
+                                    <input type="text" class="form-control" name="m_edSchool">
+                                </div>
+                                <label for="m_edGrade" class="col-sm-2 control-label">Grade</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" name="m_edGrade">
                                 </div>
                             </div>
                             <hr />
+                            <div class="form-group">
+                                <label for="m_edStart" class="col-sm-6 control-label">End Date</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" name="m_edStart">
+                                </div>
+                                <label for="m-m_end" class="col-sm-6 control-label">End Date</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" name="m_edEnd">
+                                </div>
+                            </div>
                             @*<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>*@
                             <div class="d-grid gap-2 d-md-block">
                                 <div class="form-group">

@@ -30,6 +30,16 @@ namespace WebApp.Pages
         public string? m_skExp { get; set; }
         [BindProperty]
         public int m_choice { get; set; }
+        [BindProperty]
+        public string m_edName { get; set; }
+        [BindProperty]
+        public string m_edSchool { get; set; }
+        [BindProperty]
+        public string m_edStart { get; set; }
+        [BindProperty]
+        public string m_edEnd { get; set; }
+        [BindProperty]
+        public string m_edGrade { get; set; }
         public string resultOfPost { get; set; }
         public DateTime resultOfDatePost { get; set; }
 
@@ -151,7 +161,31 @@ namespace WebApp.Pages
 
         public async Task<bool> PostEducation()
         {
-            throw new NotImplementedException("cannot Post educatioon yet");
+            Education edu = new Education()
+            {
+                m_title = m_edName,
+                m_school = m_edSchool,
+                m_grade = m_edGrade,
+                m_start = DateTime.Parse(m_edStart),
+                m_end = DateTime.Parse(m_edEnd)
+            };
+
+            var eduStringJson = JsonSerializer.Serialize(edu);
+            var client = m_clientFactory.CreateClient();
+            var reqURI = new Uri($"http://webapi/Education/CreateEducation/");
+            var response = await client.PostAsJsonAsync(reqURI.ToString(), eduStringJson);
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+
+
+            //throw new NotImplementedException("cannot Post educatioon yet");
 
             //return false;
         }
