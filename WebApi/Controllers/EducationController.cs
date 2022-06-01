@@ -43,6 +43,16 @@ namespace WebApi.Controllers
             return Created("./index", true);
 
         }
+        [HttpGet("GetAllEducation")]
+        public ActionResult<string> GetAllEducation()
+        {
+            var result = m_repo.GetAllEducation();
+            if(result != null)
+            {
+                return Ok(result);
 
+            }
+            return NotFound();
+        }
     }
 }

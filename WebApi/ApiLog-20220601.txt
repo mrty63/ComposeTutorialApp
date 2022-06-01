@@ -1243,3 +1243,541 @@
 2022-06-01 16:00:48.406 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 5.9694ms
 2022-06-01 16:00:48.409 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
 2022-06-01 16:00:48.412 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 24.0382ms
+2022-06-01 16:52:24.326 +00:00 [INF] Starting Web Host
+2022-06-01 16:52:25.696 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 16:52:25.704 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 16:52:25.707 +00:00 [INF] Hosting environment: Development
+2022-06-01 16:52:25.710 +00:00 [INF] Content root path: /app
+2022-06-01 16:52:27.570 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 16:52:27.641 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 16:52:27.669 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 16:52:28.044 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:52:28.064 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 385.3728ms
+2022-06-01 16:52:28.074 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 16:52:28.079 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 511.9837ms
+2022-06-01 16:52:28.112 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 16:52:28.118 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 16:52:28.124 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 16:52:28.128 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:52:28.131 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.3622ms
+2022-06-01 16:52:28.134 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 16:52:28.137 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 25.2371ms
+2022-06-01 16:52:28.160 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 16:52:28.164 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 16:52:28.168 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 16:52:28.171 +00:00 [INF] Redis Education Repo Started
+2022-06-01 16:52:28.175 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:52:28.178 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 6.7145ms
+2022-06-01 16:52:28.184 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 16:52:28.187 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 27.3898ms
+2022-06-01 16:52:38.117 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 16:52:38.127 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 16:52:38.133 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 16:52:38.188 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 16:52:38.194 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 57.3724ms
+2022-06-01 16:52:38.200 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 16:52:38.204 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 86.9064ms
+2022-06-01 16:56:00.146 +00:00 [INF] Starting Web Host
+2022-06-01 16:56:01.560 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 16:56:01.567 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 16:56:01.569 +00:00 [INF] Hosting environment: Development
+2022-06-01 16:56:01.572 +00:00 [INF] Content root path: /app
+2022-06-01 16:56:03.351 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 16:56:03.422 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 16:56:03.452 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 16:56:03.773 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:56:03.791 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 332.4259ms
+2022-06-01 16:56:03.799 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 16:56:03.805 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 456.6484ms
+2022-06-01 16:56:03.836 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 16:56:03.843 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 16:56:03.847 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 16:56:03.852 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:56:03.854 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.6271ms
+2022-06-01 16:56:03.859 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 16:56:03.864 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 27.4753ms
+2022-06-01 16:56:03.887 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 16:56:03.891 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 16:56:03.894 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 16:56:03.897 +00:00 [INF] Redis Education Repo Started
+2022-06-01 16:56:03.903 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:56:03.906 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 9.4398ms
+2022-06-01 16:56:03.910 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 16:56:03.913 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 25.5470ms
+2022-06-01 16:57:56.746 +00:00 [INF] Starting Web Host
+2022-06-01 16:57:58.257 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 16:57:58.265 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 16:57:58.268 +00:00 [INF] Hosting environment: Development
+2022-06-01 16:57:58.270 +00:00 [INF] Content root path: /app
+2022-06-01 16:57:59.946 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 16:58:00.029 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 16:58:00.060 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 16:58:00.404 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:58:00.424 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 356.4122ms
+2022-06-01 16:58:00.432 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 16:58:00.439 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 495.2370ms
+2022-06-01 16:58:00.481 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 16:58:00.487 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 16:58:00.492 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 16:58:00.499 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:58:00.502 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.864ms
+2022-06-01 16:58:00.505 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 16:58:00.510 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 29.4202ms
+2022-06-01 16:58:00.526 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 16:58:00.530 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 16:58:00.534 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 16:58:00.538 +00:00 [INF] Redis Education Repo Started
+2022-06-01 16:58:00.541 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:58:00.544 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 7.1308ms
+2022-06-01 16:58:00.548 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 16:58:00.551 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 24.9811ms
+2022-06-01 16:58:41.052 +00:00 [INF] Starting Web Host
+2022-06-01 16:58:42.407 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 16:58:42.415 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 16:58:42.419 +00:00 [INF] Hosting environment: Development
+2022-06-01 16:58:42.421 +00:00 [INF] Content root path: /app
+2022-06-01 16:58:44.223 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 16:58:44.293 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 16:58:44.318 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 16:58:44.655 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:58:44.675 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 349.1134ms
+2022-06-01 16:58:44.681 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 16:58:44.687 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 467.6277ms
+2022-06-01 16:58:44.721 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 16:58:44.726 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 16:58:44.730 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 16:58:44.734 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:58:44.737 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.5788ms
+2022-06-01 16:58:44.743 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 16:58:44.748 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 26.9125ms
+2022-06-01 16:58:44.766 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 16:58:44.771 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 16:58:44.775 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 16:58:44.779 +00:00 [INF] Redis Education Repo Started
+2022-06-01 16:58:44.783 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 16:58:44.786 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 7.1158ms
+2022-06-01 16:58:44.790 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 16:58:44.795 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 28.3212ms
+2022-06-01 16:58:47.928 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 16:58:47.933 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 16:58:47.938 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 16:58:47.989 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 16:58:47.994 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 53.1836ms
+2022-06-01 16:58:47.999 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 16:58:48.002 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 73.3466ms
+2022-06-01 17:07:05.173 +00:00 [INF] Starting Web Host
+2022-06-01 17:07:06.666 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:07:06.673 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:07:06.675 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:07:06.678 +00:00 [INF] Content root path: /app
+2022-06-01 17:07:08.449 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:07:08.521 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:07:08.555 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:07:08.896 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:07:08.923 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 358.3862ms
+2022-06-01 17:07:08.928 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:07:08.937 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 490.1948ms
+2022-06-01 17:07:08.968 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:07:08.975 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:07:08.981 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:07:08.985 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:07:08.988 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.1587ms
+2022-06-01 17:07:08.991 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:07:08.999 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 30.9510ms
+2022-06-01 17:07:09.015 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:07:09.019 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:07:09.022 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:07:09.028 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:07:09.033 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:07:09.036 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 8.7335ms
+2022-06-01 17:07:09.038 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:07:09.047 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 30.1127ms
+2022-06-01 17:14:29.766 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:14:29.771 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:14:29.775 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:14:29.835 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:14:29.840 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 60.2546ms
+2022-06-01 17:14:29.843 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:14:29.851 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 84.2766ms
+2022-06-01 17:17:32.493 +00:00 [INF] Starting Web Host
+2022-06-01 17:17:33.886 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:17:33.893 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:17:33.895 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:17:33.898 +00:00 [INF] Content root path: /app
+2022-06-01 17:17:35.790 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:17:35.873 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:17:35.897 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:17:36.216 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:17:36.240 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 335.3385ms
+2022-06-01 17:17:36.247 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:17:36.253 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 466.5591ms
+2022-06-01 17:17:36.284 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:17:36.288 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:17:36.294 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:17:36.298 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:17:36.301 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.1315ms
+2022-06-01 17:17:36.304 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:17:36.309 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 25.5857ms
+2022-06-01 17:17:36.326 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:17:36.330 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:17:36.335 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:17:36.338 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:17:36.342 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:17:36.346 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 8.1791ms
+2022-06-01 17:17:36.349 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:17:36.353 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 27.2855ms
+2022-06-01 17:20:42.720 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:20:42.725 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:20:42.730 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:20:42.799 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:20:42.805 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 71.5797ms
+2022-06-01 17:20:42.810 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:20:42.814 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 93.7316ms
+2022-06-01 17:20:42.841 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:20:42.846 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:20:42.849 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:20:42.852 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:21:27.951 +00:00 [INF] Starting Web Host
+2022-06-01 17:21:29.347 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:21:29.353 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:21:29.356 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:21:29.360 +00:00 [INF] Content root path: /app
+2022-06-01 17:21:31.080 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:21:31.162 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:21:31.187 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:21:31.513 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:21:31.533 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 335.0263ms
+2022-06-01 17:21:31.540 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:21:31.549 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 472.1520ms
+2022-06-01 17:21:31.574 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:21:31.582 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:21:31.587 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:21:31.591 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:21:31.595 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.8647ms
+2022-06-01 17:21:31.600 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:21:31.607 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 33.0864ms
+2022-06-01 17:21:31.626 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:21:31.630 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:21:31.635 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:21:31.638 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:21:31.641 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:21:31.644 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 6.3145ms
+2022-06-01 17:21:31.647 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:21:31.651 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 25.6129ms
+2022-06-01 17:21:33.117 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:21:33.122 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:21:33.127 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:21:33.179 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:21:33.185 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 55.4526ms
+2022-06-01 17:21:33.191 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:21:33.194 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 76.9511ms
+2022-06-01 17:21:33.218 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:21:33.222 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:21:33.227 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:21:33.230 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:21:33.244 +00:00 [INF] List of 1 Education made from redis
+2022-06-01 17:21:33.248 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:21:33.252 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 21.4292ms
+2022-06-01 17:21:33.257 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:21:33.259 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 41.5564ms
+2022-06-01 17:23:42.243 +00:00 [INF] Starting Web Host
+2022-06-01 17:23:43.692 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:23:43.698 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:23:43.701 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:23:43.704 +00:00 [INF] Content root path: /app
+2022-06-01 17:23:45.540 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:23:45.611 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:23:45.638 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:23:45.974 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:23:45.994 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 348.7987ms
+2022-06-01 17:23:46.004 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:23:46.009 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 473.3065ms
+2022-06-01 17:23:46.060 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:23:46.066 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:23:46.072 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:23:46.076 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:23:46.079 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.6681ms
+2022-06-01 17:23:46.083 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:23:46.086 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 25.8705ms
+2022-06-01 17:23:46.104 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:23:46.109 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:23:46.113 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:23:46.117 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:23:46.123 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:23:46.127 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 11.0176ms
+2022-06-01 17:23:46.132 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:23:46.136 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 32.3321ms
+2022-06-01 17:23:47.375 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:23:47.384 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:23:47.389 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:23:47.439 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:23:47.446 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 53.7704ms
+2022-06-01 17:23:47.449 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:23:47.452 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 77.5269ms
+2022-06-01 17:23:47.478 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:23:47.483 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:23:47.487 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:23:47.491 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:23:47.508 +00:00 [INF] List of 1 Education made from redis
+2022-06-01 17:23:47.511 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:23:47.513 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 22.3772ms
+2022-06-01 17:23:47.517 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:23:47.520 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 42.6234ms
+2022-06-01 17:24:50.647 +00:00 [INF] Starting Web Host
+2022-06-01 17:24:52.036 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:24:52.045 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:24:52.048 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:24:52.051 +00:00 [INF] Content root path: /app
+2022-06-01 17:24:53.414 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:24:53.485 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:24:53.512 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:24:53.851 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:24:53.870 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 350.9085ms
+2022-06-01 17:24:53.878 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:24:53.883 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 471.5290ms
+2022-06-01 17:24:53.908 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:24:53.915 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:24:53.919 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:24:53.923 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:24:53.926 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.5088ms
+2022-06-01 17:24:53.933 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:24:53.939 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 29.9233ms
+2022-06-01 17:24:53.954 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:24:53.959 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:24:53.982 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:24:53.985 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:24:53.988 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:24:53.991 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 6.0565ms
+2022-06-01 17:24:53.994 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:24:53.998 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 44.2757ms
+2022-06-01 17:24:56.731 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:24:56.735 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:24:56.739 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:24:56.796 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:24:56.801 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 58.964ms
+2022-06-01 17:24:56.805 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:24:56.809 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 77.8979ms
+2022-06-01 17:24:56.830 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:24:56.835 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:24:56.840 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:24:56.843 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:24:56.858 +00:00 [INF] List of 1 Education made from redis
+2022-06-01 17:24:56.861 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:24:56.864 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 21.1656ms
+2022-06-01 17:24:56.868 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:24:56.872 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 41.3169ms
+2022-06-01 17:26:02.194 +00:00 [INF] Starting Web Host
+2022-06-01 17:26:03.310 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:26:03.317 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:26:03.319 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:26:03.320 +00:00 [INF] Content root path: /app
+2022-06-01 17:26:05.385 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:26:05.492 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:26:05.529 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:26:05.883 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:26:05.900 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 361.6479ms
+2022-06-01 17:26:05.906 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:26:05.911 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 529.5834ms
+2022-06-01 17:26:05.954 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:26:05.958 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:26:05.962 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:26:05.968 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:26:05.970 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.0358ms
+2022-06-01 17:26:05.975 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:26:05.986 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 30.4640ms
+2022-06-01 17:26:06.008 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:26:06.013 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:26:06.017 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:26:06.019 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:26:06.021 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:26:06.023 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 4.6575ms
+2022-06-01 17:26:06.025 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:26:06.029 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 21.0446ms
+2022-06-01 17:26:07.166 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:26:07.171 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:26:07.174 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:26:07.227 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:26:07.231 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 54.3318ms
+2022-06-01 17:26:07.233 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:26:07.236 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 69.3397ms
+2022-06-01 17:26:07.262 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:26:07.266 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:26:07.270 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:26:07.272 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:26:07.287 +00:00 [INF] List of 1 Education made from redis
+2022-06-01 17:26:07.289 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:26:07.292 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 19.4035ms
+2022-06-01 17:26:07.294 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:26:07.296 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 34.0015ms
+2022-06-01 17:27:09.837 +00:00 [INF] Starting Web Host
+2022-06-01 17:27:11.244 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:27:11.250 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:27:11.255 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:27:11.258 +00:00 [INF] Content root path: /app
+2022-06-01 17:27:13.031 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:27:13.113 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:27:13.140 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:27:13.456 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:27:13.476 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 327.2767ms
+2022-06-01 17:27:13.481 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:27:13.487 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 459.1033ms
+2022-06-01 17:27:13.554 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:27:13.559 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:27:13.565 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:27:13.569 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:27:13.572 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.5784ms
+2022-06-01 17:27:13.575 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:27:13.578 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 24.6808ms
+2022-06-01 17:27:13.594 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:27:13.598 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:27:13.603 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:27:13.606 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:27:13.610 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:27:13.612 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 6.5892ms
+2022-06-01 17:27:13.616 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:27:13.619 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 25.9627ms
+2022-06-01 17:27:15.176 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:27:15.181 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:27:15.186 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:27:15.237 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:27:15.242 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 53.0634ms
+2022-06-01 17:27:15.246 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:27:15.249 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 73.2263ms
+2022-06-01 17:27:15.275 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:27:15.280 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:27:15.284 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:27:15.287 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:27:15.303 +00:00 [INF] List of 1 Education made from redis
+2022-06-01 17:27:15.306 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:27:15.309 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 22.4569ms
+2022-06-01 17:27:15.312 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:27:15.315 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 40.0635ms
+2022-06-01 17:28:20.240 +00:00 [INF] Starting Web Host
+2022-06-01 17:28:21.612 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:28:21.619 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:28:21.622 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:28:21.625 +00:00 [INF] Content root path: /app
+2022-06-01 17:28:23.358 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:28:23.454 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:28:23.478 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:28:23.787 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:28:23.807 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 320.1061ms
+2022-06-01 17:28:23.814 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:28:23.821 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 468.4651ms
+2022-06-01 17:28:23.852 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:28:23.860 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:28:23.865 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:28:23.869 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:28:23.872 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.5608ms
+2022-06-01 17:28:23.877 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:28:23.880 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 28.4373ms
+2022-06-01 17:28:23.905 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:28:23.933 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:28:23.939 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:28:23.942 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:28:23.945 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:28:23.949 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 6.5982ms
+2022-06-01 17:28:23.953 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:28:23.956 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 51.3175ms
+2022-06-01 17:28:24.944 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:28:24.949 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:28:24.954 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:28:25.007 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:28:25.013 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 55.2657ms
+2022-06-01 17:28:25.017 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:28:25.020 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 75.8942ms
+2022-06-01 17:28:25.047 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:28:25.052 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:28:25.056 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:28:25.059 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:28:25.074 +00:00 [INF] List of 1 Education made from redis
+2022-06-01 17:28:25.076 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:28:25.079 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 20.3445ms
+2022-06-01 17:28:25.086 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:28:25.090 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 42.4704ms
+2022-06-01 17:29:25.726 +00:00 [INF] Starting Web Host
+2022-06-01 17:29:27.157 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:29:27.163 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:29:27.166 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:29:27.169 +00:00 [INF] Content root path: /app
+2022-06-01 17:29:28.819 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:29:28.902 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:29:28.927 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:29:29.266 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:29:29.288 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 351.0392ms
+2022-06-01 17:29:29.298 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:29:29.303 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 485.8527ms
+2022-06-01 17:29:29.329 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:29:29.336 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:29:29.340 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:29:29.346 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:29:29.349 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 4.8042ms
+2022-06-01 17:29:29.352 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:29:29.356 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 26.4852ms
+2022-06-01 17:29:29.375 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:29:29.380 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:29:29.385 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:29:29.388 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:29:29.391 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:29:29.393 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 5.7046ms
+2022-06-01 17:29:29.396 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:29:29.399 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 23.9849ms
+2022-06-01 17:36:34.635 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:36:34.640 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:36:34.644 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:36:34.692 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:36:34.697 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 50.9537ms
+2022-06-01 17:36:34.700 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:36:34.704 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 68.3152ms
+2022-06-01 17:36:34.730 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:36:34.735 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:36:34.740 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:36:34.743 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:36:34.761 +00:00 [INF] List of 1 Education made from redis
+2022-06-01 17:36:34.763 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:36:34.767 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 23.8555ms
+2022-06-01 17:36:34.770 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:36:34.773 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 43.1936ms
+2022-06-01 17:37:59.476 +00:00 [INF] Starting Web Host
+2022-06-01 17:38:00.869 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-01 17:38:00.878 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-01 17:38:00.881 +00:00 [INF] Hosting environment: Development
+2022-06-01 17:38:00.884 +00:00 [INF] Content root path: /app
+2022-06-01 17:38:02.611 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/Ping/ - -
+2022-06-01 17:38:02.682 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:38:02.711 +00:00 [INF] Route matched with {action = "Ping", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Ping() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:38:03.021 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:38:03.041 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.Ping (WebApi) in 322.7925ms
+2022-06-01 17:38:03.047 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.Ping (WebApi)'
+2022-06-01 17:38:03.053 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/Ping/ - - - 200 - text/plain;+charset=utf-8 444.7733ms
+2022-06-01 17:38:03.085 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/Ping/ - -
+2022-06-01 17:38:03.091 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:38:03.095 +00:00 [INF] Route matched with {action = "Ping", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-01 17:38:03.100 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:38:03.104 +00:00 [INF] Executed action WebApi.Controllers.JobsController.Ping (WebApi) in 5.1074ms
+2022-06-01 17:38:03.107 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.Ping (WebApi)'
+2022-06-01 17:38:03.111 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/Ping/ - - - 200 - text/plain;+charset=utf-8 26.2155ms
+2022-06-01 17:38:03.131 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/Ping/ - -
+2022-06-01 17:38:03.136 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:38:03.140 +00:00 [INF] Route matched with {action = "Ping", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Ping() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:38:03.143 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:38:03.147 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:38:03.150 +00:00 [INF] Executed action WebApi.Controllers.EducationController.Ping (WebApi) in 6.762ms
+2022-06-01 17:38:03.153 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.Ping (WebApi)'
+2022-06-01 17:38:03.157 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/Ping/ - - - 200 - text/plain;+charset=utf-8 25.8691ms
+2022-06-01 17:48:49.151 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-01 17:48:49.156 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:48:49.160 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-01 17:48:49.217 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-01 17:48:49.221 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 58.893ms
+2022-06-01 17:48:49.225 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-01 17:48:49.228 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 77.0396ms
+2022-06-01 17:48:49.256 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-01 17:48:49.262 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:48:49.266 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-01 17:48:49.269 +00:00 [INF] Redis Education Repo Started
+2022-06-01 17:48:49.285 +00:00 [INF] List of 1 Education made from redis
+2022-06-01 17:48:49.288 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-01 17:48:49.291 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 22.2038ms
+2022-06-01 17:48:49.294 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-01 17:48:49.297 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 40.8371ms

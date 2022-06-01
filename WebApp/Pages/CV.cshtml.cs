@@ -4,31 +4,33 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using CV;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using CV;
 
 namespace WebApp.Pages
 {
-    public class ListAllSkillsModel : PageModel
+    public class CVModel : PageModel
     {
         private readonly IHttpClientFactory m_clientFactory;
 
-
-        public ListAllSkillsModel(IHttpClientFactory clientFactory)
+        public CVModel(IHttpClientFactory clientFactory)
         {
             m_clientFactory = clientFactory;
         }
+
         public void OnGet()
         {
-            
         }
-        public async Task<List<Skill>>GetSkills()
+        public async Task<List<Education>> GetEducation()
+        {
+            var result = await Methods.GetEducation(m_clientFactory);
+            return result;
+        }
+        public async Task<List<Skill>> GetSkills()
         {
             var result = await Methods.GetAllSkills(m_clientFactory);
             return result;
-            
-
         }
     }
 }

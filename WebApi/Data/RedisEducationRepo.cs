@@ -43,7 +43,7 @@ namespace WebApi.Data
             string jsonString;
             {
                 ;
-                var keys = m_redis.GetServer("redis", 6379).Keys(Constants.serverIdSkill);
+                var keys = m_redis.GetServer("redis", 6379).Keys(Constants.serverIdEdu);
                 foreach (var key in keys)
                 {
                     Education tempEdu = JsonSerializer.Deserialize<Education>(m_db.StringGet(key));
@@ -63,7 +63,7 @@ namespace WebApi.Data
             {
                 Log.Error($"Invalid Job Id passed to {nameof(IEducationRepo.GetEducationById)}");
                 Log.Error($"Invalid Job Id  :{id}");
-                
+                return null;
             }
             return res;
         }
