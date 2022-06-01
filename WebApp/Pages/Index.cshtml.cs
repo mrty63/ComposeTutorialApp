@@ -108,6 +108,7 @@ namespace WebApp.Pages
         {
             await SkillsPing();
             await JobsPing();
+            await EducationPing();
         }
         private async Task<int> JobsPing()
         {
@@ -127,6 +128,16 @@ namespace WebApp.Pages
             Log.Logger.Information($"Ping Skills Controler  :   {pingResponse.Content.ReadAsStringAsync().Result}");
             Log.Logger.Information($"Ping Response code     :   {pingResponse.StatusCode}");
             
+            return 0;
+        }
+        private async Task<int> EducationPing()
+        {
+            var client = m_clientFactory.CreateClient();
+            var pingURI = new Uri($"http://webapi/Education/Ping/"); ;
+            var pingResponse = await client.GetAsync(pingURI.ToString());
+            Log.Logger.Information($"Ping Education Controler  :   {pingResponse.Content.ReadAsStringAsync().Result}");
+            Log.Logger.Information($"Ping Response code     :   {pingResponse.StatusCode}");
+
             return 0;
         }
         class Job

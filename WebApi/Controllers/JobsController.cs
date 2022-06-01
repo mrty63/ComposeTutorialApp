@@ -37,6 +37,10 @@ namespace WebApi.Controllers
         public ActionResult<Job> CreateJob([FromBody] string jobString)
         //public ActionResult<Job> CreateJob(string jobString)
         {
+            if (jobString == null)
+            {
+                return BadRequest();
+            }
             Console.WriteLine(jobString);
             Job jstr = JsonSerializer.Deserialize<Job>(jobString);
             

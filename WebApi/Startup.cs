@@ -41,6 +41,7 @@ namespace WebApi
             //services.AddSingleton<ILogger,Logger>();
             services.AddScoped<ISkillRepo, RedisSkillRepo>();
             services.AddScoped<IJobRepo, RedisJobRepo>();
+            services.AddScoped<IEducationRepo, RedisEducationRepo>();
         }
        
 

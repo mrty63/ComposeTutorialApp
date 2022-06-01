@@ -10,7 +10,6 @@ using System.Text.Json;
 //using System.Threading.Tasks;
 using CV;
 
-using CV;
 namespace WebApp.Pages
 {
     public class AddItemModel : PageModel
@@ -18,14 +17,19 @@ namespace WebApp.Pages
         private readonly IHttpClientFactory m_clientFactory;
         private Skill sk;
         [BindProperty]
-        public string m_title { get; set; }
+        public string m_jobTitle { get; set; }
         [BindProperty]
-        public string m_company { get; set; }
+        public string m_jobCompany { get; set; }
         [BindProperty]
-        public string m_start { get; set; }
+        public string m_jobStart { get; set; }
         [BindProperty]
-        public string? m_end { get; set; }
-
+        public string? m_jobEnd { get; set; }
+        [BindProperty]
+        public string? m_skName { get; set; }
+        [BindProperty]
+        public string? m_skExp { get; set; }
+        [BindProperty]
+        public int m_choice { get; set; }
         public string resultOfPost { get; set; }
         public DateTime resultOfDatePost { get; set; }
 
@@ -43,28 +47,54 @@ namespace WebApp.Pages
             //var companyName = Request.Form["m_company"];
             //var start= Request.Form["m_start"];
             //var end = Request.Form["m_end"];
-            DateTime resultOfDatePost = DateTime.Parse(m_start);
-            resultOfPost = $"{m_title} {m_company} {m_start}";
+            //DateTime resultOfDatePost = DateTime.Parse(m_start);
+            //resultOfPost = $"{m_title} {m_company} {m_start}";
 
+            bool postSuccess = false;
+            switch (m_choice)
+            {
+                case 1: postSuccess = await PostJob();
+                    break;
+                case 2: postSuccess = await PostSkill();
+                    break;
+                case 3: postSuccess = await PostEducation();
+                    break;
+                default:
+                    break;
+            }
+            if(postSuccess)
+            {
+                return RedirectToPage("./AddItem");
+            }
+            else
+            {
+                throw new NotImplementedException("insertion-fail");
+
+            }
+
+        }
+
+        public async Task<bool> PostJob()
+        {
             using (var client = m_clientFactory.CreateClient())
             {
                 Job job;
                 job = new Job()
                 {
-                    m_title = this.m_title,
-                    m_company = this.m_company,
-                    m_start = DateTime.Parse(this.m_start),
+                    m_title = this.m_jobTitle,
+                    m_company = this.m_jobCompany,
+                    m_start = DateTime.Parse(this.m_jobStart),
                 };
-                if (string.IsNullOrEmpty(this.m_end))
+                if (string.IsNullOrEmpty(this.m_jobEnd))
                 {
 
                     job.m_end = null;
-                    
+
                 }
                 else
                 {
-                        job.m_end = DateTime.Parse(this.m_end);
-                   
+                    job.m_end = DateTime.Parse(this.m_jobEnd);
+
                 }
                 job.m_id = 1;
 
@@ -77,28 +107,54 @@ namespace WebApp.Pages
 
 
                 //if (name != null && exp != null)
-                
-                    //var request1 = new System.Net.Http.HttpRequestMessage();
-                    var reqURI = new Uri($"http://webapi/Jobs/CreateJob/");
 
-                    var response = await client.PostAsJsonAsync(reqURI.ToString(), jobstringJson);
-                    //var response2 = await client.PostAsync("http://webapi/Skills/CreateSkill/", cnt);
-                    //var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringPlain);
+                //var request1 = new System.Net.Http.HttpRequestMessage();
+                var reqURI = new Uri($"http://webapi/Jobs/CreateJob/");
 
-                
-                if(response.IsSuccessStatusCode)
+                var response = await client.PostAsJsonAsync(reqURI.ToString(), jobstringJson);
+                //var response2 = await client.PostAsync("http://webapi/Skills/CreateSkill/", cnt);
+                //var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringPlain);
+
+
+                if (response.IsSuccessStatusCode)
                 {
-                    return RedirectToPage("./Index");
+                    return true;
                 }
-                else 
+                else
                 {
-                    return RedirectToPage("./Error");
+                    return false;
 
-                    throw new NotImplementedException("insertion-fail"); 
                 }
+            }
+
+        }
+
+        public async Task<bool> PostSkill()
+        {
+
+            Skill skill = new Skill() { m_name = m_skName, m_exp = m_skExp };
+
+            var skillStringJson = JsonSerializer.Serialize(skill);
+            var client = m_clientFactory.CreateClient();
+            var reqURI = new Uri($"http://webapi/Skills/CreateSkill/");
+            var response = await client.PostAsJsonAsync(reqURI.ToString(), skillStringJson);
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
             }
         }
 
+        public async Task<bool> PostEducation()
+        {
+            throw new NotImplementedException("cannot Post educatioon yet");
+
+            //return false;
+        }
     }
     //public class Job
     //{

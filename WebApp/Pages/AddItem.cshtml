@@ -2,96 +2,150 @@
 @model WebApp.Pages.AddItemModel
 @{
 }
+<div class="d-grid gap-2 d-md-block col-6 mx-auto">
+    <div>
+        <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#selectorModal">Enter Job</button>
 
-<div>
-    Job modal
-    <button type="button" class="btn btn-info" data-toggle="jobModal" data-target="#JobFormModal">JOB</button>
+        <div class="modal fade" id="selectorModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <form class="form-horizontal" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Job Details</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
-<div class="modal" id="JobFormModal" role="dialog">
-    <div class="modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title"> Enter Job Details</h5>
-                <button type="button" class="close" data-dismiss="jobModal">&times;</button>
-            </div>
-            <div class="modal-body"></div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="jobModal">Discard</button>
-                <button type="submit" class="btn-block btn-primary">Save</button>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label for="m_title" class="col-sm-4 control-label">Job Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="m_jobTitle">
+                                </div>
+                                <label for="m_company" class="col-sm-4 control-label">Company Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="m_jobCompany">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="m-start" class="col-sm-2 control-label">Start Date</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" name="m_jobStart">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="m-m_end" class="col-sm-2 control-label">Start Date</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" name="m_jobEnd">
+                                </div>
+                            </div>
+                            <hr />
+                            @*<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>*@
+                            <div class="d-grid gap-2 d-md-block">
+                                <div class="form-group">
+                                    <div class="">
+                                        <button type="submit" class="btn btn-default btn-outline-primary" value=1 name="m_choice">Submit</button>
+                                    </div>
+
+                                </div>
+                                <div class="">
+                                    <button type="reset" class="btn-secondary" data-dismiss="modal">Discard</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        @*<div class="modal-footer">
+                            </div>*@
+                    </div>
+                </form>
             </div>
 
         </div>
     </div>
+    <div>
+        <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#skillModal">Enter Skill</button>
 
-</div>
-</div>
+        <div class="modal fade" id="skillModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <form class="form-horizontal" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Skill Details</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
-<div>
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#selectorModal">Other selectors</button>
+                        <div class="modal-body">
 
-    <div class="modal fade" id="selectorModal" role="dialog">
-        <div class="modal-dialog">
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Other Selectors</h2>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <h3>Pseudo-class selectors</h3>
-                    Describes the state of an element.
-                    <pre><code class="bg-light p-2 rounded"> .btn:hover { border:6px solid yellow; }</code></pre>
-                    <h3>Attribute selectors</h3>
-                    Select elements which have a certain attribute or by attribute and value
-                    <pre class="p-4"><code class="bg-light p-2 rounded"> aElement[targetAttribute] {  background-color: yellow; }</code></pre>
-                    <pre class="p-4"><code class="bg-light p-2 rounded"> aElement[targetAttribute="someValue"] {  background-color: yellow; }</code></pre>
-                    <h3>Descendant selectors</h3>
-                    Select elements which have a certain attribute or by attribute and value
-                    <pre class="p-4"><code class="bg-light p-2 rounded"> p h3 {  background-color: yellow; }</code></pre>
-                </div>
+                            <div class="form-group">
+                                <label for="m_sk_name" class="col-sm-4 control-label">Skill Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="m_skName">
+                                </div>
+                                <label for="m_sk_exp" class="col-sm-4 control-label">Skill Experience</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="m_skExp">
+                                </div>
+                            </div>
+                            <hr />
+                            @*<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>*@
+                            <div class="d-grid gap-2 d-md-block">
+                                <div class="form-group">
+                                    <div class="">
+                                        <button type="submit" class="btn btn-default btn-outline-primary" value=2 name="m_choice">Submit</button>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <button type="reset" class="btn-secondary" data-dismiss="modal">Discard</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
 
-    </div>
-</div>
-
-
-<form class="form-horizontal" method="post">
-    <div class="form-group">
-        <label for="m_title" class="col-sm-4 control-label">Job Title</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" name="m_title">
-        </div>
-        <label for="m_company" class="col-sm-4 control-label">Company Name</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" name="m_company">
         </div>
     </div>
-    <div class="form-group">
-            <label for="m-start" class="col-sm-2 control-label">Start Date</label>
-            <div class="col-sm-10">
-                <input type="date" class="form-control" name="m_start">
+    <div>
+        <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#eduModal">Enter Education</button>
+
+        <div class="modal fade" id="eduModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <form class="form-horizontal" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Skill Details</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label for="m_sk_name" class="col-sm-4 control-label">Skill Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="m_skName">
+                                </div>
+                                <label for="m_sk_exp" class="col-sm-4 control-label">Skill Experience</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="m_skExp">
+                                </div>
+                            </div>
+                            <hr />
+                            @*<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>*@
+                            <div class="d-grid gap-2 d-md-block">
+                                <div class="form-group">
+                                    <div class="">
+                                        <button type="submit" class="btn btn-default btn-outline-primary" value=3 name="m_choice">Submit</button>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <button type="reset" class="btn-secondary" data-dismiss="modal">Discard</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
-    <div class="form-group">
-            <label for="m-m_end" class="col-sm-2 control-label">Start Date</label>
-            <div class="col-sm-10">
-                <input type="date" class="form-control" name="m_end">
-            </div>
-        </div>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <button type="submit" class="btn btn-default btn-outline-primary">Submit</button>
+
         </div>
     </div>
-</form>
-
-
-<div id="input">
-    @Model.resultOfPost <br />
-    @Model.resultOfDatePost
-
 </div>

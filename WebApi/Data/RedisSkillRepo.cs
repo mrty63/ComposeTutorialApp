@@ -19,12 +19,11 @@ namespace WebApi.Data
         private readonly ConnectionMultiplexer m_redis;
         //private readonly Microsoft.Extensions.Logging.ILogger m_logger;
         private IDatabase m_db;
-        private static int serverId = 1;
 
         public RedisSkillRepo(ConnectionMultiplexer redis/*, ILogger<RedisJobRepo> logger*/)
         {
             m_redis = redis;
-            m_db = m_redis.GetDatabase(serverId);
+            m_db = m_redis.GetDatabase(Constants.serverIdSkill);
             //m_logger = logger;
 
         }
@@ -84,7 +83,7 @@ namespace WebApi.Data
         {
             List<Skill> listSkills = new List<Skill>();
             {
-                var keys = m_redis.GetServer("redis", 6379).Keys(serverId);
+                var keys = m_redis.GetServer("redis", 6379).Keys(Constants.serverIdSkill);
                 foreach(var key in keys)
                 {
                     listSkills.Add(new Skill { m_name = key.ToString(), m_exp = m_db.StringGet(key) });
