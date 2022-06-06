@@ -32,5 +32,10 @@ namespace WebApp.Pages
             var result = await Methods.GetAllSkills(m_clientFactory);
             return result;
         }
+        public async Task<List<Job>> GetJobs()
+        {
+            var result = await Methods.GetJobs(m_clientFactory);
+            return result;
+        }
     }
 }

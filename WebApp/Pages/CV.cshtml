@@ -10,38 +10,74 @@
 
 <div>
     <h3>Work History</h3>
+    <div class="row">
+        @{ 
+            var JobStr = Model.GetJobs().Result;
+            if(JobStr != null)
+            {
+                foreach (var item in JobStr)
+                {
+                    <div class="card m-sm-1 card-columns">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h4> @item.m_title </h4>
+                                <h5> @item.m_company </h5>
+                            </div>
+                            <div class="card-body">
+                                <p> @item.m_start.ToShortDateString()</p>
+                                @{
+                                    if (item.m_end.HasValue)
+                                    {
+                                        <p class="flex-column">End     : @item.m_end.Value.ToShortDateString() </p>
+                                    }
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        }
+    </div>
 </div>
 <div>
     <h3>Skills</h3>
-    @{
-        var skStr = Model.GetSkills().Result;
-        // List<Skill> skL = JsonSerialiser.Deserialise(jsonStr);
-        if (skStr != null)
-        {
-            foreach (var entry in skStr)
+    <div class="row">
+        @{
+            var skStr = Model.GetSkills().Result;
+            // List<Skill> skL = JsonSerialiser.Deserialise(jsonStr);
+            if (skStr != null)
             {
-                <div class="card mb-sm-2 flex-sm-row" style="width: 60%">
-                    <div class="card-body">
-                        <h4 class="card-header"> @entry.m_name</h4>
-                        <p class="card-text">@entry.m_exp years</p>
+                foreach (var entry in skStr)
+                {
+                    <div class="card m-sm-2 flex-sm-column">
+                        <div class="card-body">
+                            <h4 class="card-header"> @entry.m_name</h4>
+                            <p class="card-text">@entry.m_exp years</p>
 
+                        </div>
                     </div>
-                </div>
 
+                }
             }
         }
-    }
+    </div>
+   
 </div>
 <div>
     <h3>Education</h3>
-    @{
-        var eduStr = Model.GetEducation().Result;
-        // List<Skill> skL = JsonSerialiser.Deserialise(jsonStr);
-        if (eduStr != null)
-        {
-            foreach (var entry in eduStr)
+    <div class="row">
+        @{
+            var eduStr = Model.GetEducation().Result;
+            // List<Skill> skL = JsonSerialiser.Deserialise(jsonStr);
+
+            if (eduStr != null)
             {
-                <div class="card mb-sm-2 flex-sm-row" style="width: 60%">
+
+                foreach (var entry in eduStr)
+                {
+                    <div class="card col m-sm-1 flex-sm-column">
                         <div class="card-body">
                             <div class="card-header">
 
@@ -51,14 +87,24 @@
                             <div class="card-text">
 
                                 <p class="">@entry.m_grade </p>
-                                <p class="flex-row">Start: @entry.m_start.ToShortDateString() years</p>
-                                <p class="flex-row">Start: @entry.m_end.ToShortDateString() </p>
+                                <div class="row">
+                                    <p class="flex-column">Start   : @entry.m_start.ToShortDateString() years   </p>
+                                    @{
+                                        if (entry.m_end > entry.m_start)
+                                        {
+                                            <p class="flex-column">End     : @entry.m_end.ToShortDateString() </p>
+                                        }
+                                    }
+                                </div>
+
                             </div>
 
                         </div>
-                </div>
+                    </div>
 
+                }
             }
         }
-    }
+    </div>
+    
 </div>

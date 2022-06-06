@@ -1,0 +1,142 @@
+2022-06-06 05:57:25.334 +00:00 [INF] Starting Web Host
+2022-06-06 05:57:29.954 +00:00 [INF] Ping Skills Controler  :   pong
+2022-06-06 05:57:29.957 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 05:57:30.000 +00:00 [INF] Ping Jobs Controler :   pong
+2022-06-06 05:57:30.003 +00:00 [INF] Ping Response code :   OK
+2022-06-06 05:57:30.057 +00:00 [INF] Ping Education Controler  :   pong
+2022-06-06 05:57:30.060 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 05:58:46.605 +00:00 [INF] Ping Skills Controler  :   pong
+2022-06-06 05:58:46.609 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 05:58:46.653 +00:00 [INF] Ping Jobs Controler :   pong
+2022-06-06 05:58:46.656 +00:00 [INF] Ping Response code :   OK
+2022-06-06 05:58:46.692 +00:00 [INF] Ping Education Controler  :   pong
+2022-06-06 05:58:46.694 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 06:21:22.734 +00:00 [INF] Starting Web Host
+2022-06-06 06:21:26.506 +00:00 [INF] Ping Skills Controler  :   pong
+2022-06-06 06:21:26.513 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 06:21:26.565 +00:00 [INF] Ping Jobs Controler :   pong
+2022-06-06 06:21:26.568 +00:00 [INF] Ping Response code :   OK
+2022-06-06 06:21:26.619 +00:00 [INF] Ping Education Controler  :   pong
+2022-06-06 06:21:26.621 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 06:24:14.553 +00:00 [INF] Starting Web Host
+2022-06-06 06:24:18.273 +00:00 [INF] Ping Skills Controler  :   System.InvalidOperationException: No authentication handlers are registered. Did you forget to call AddAuthentication().Add[SomeAuthHandler]("no pong",...)?
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ForbidAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ForbidResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+HEADERS
+=======
+Host: webapi
+traceparent: 00-a9e0015fab72126f9d1dd7d20a7c9384-182dcccae50c38e9-00
+
+2022-06-06 06:24:18.276 +00:00 [INF] Ping Response code     :   InternalServerError
+2022-06-06 06:24:18.326 +00:00 [INF] Ping Jobs Controler :   pong
+2022-06-06 06:24:18.332 +00:00 [INF] Ping Response code :   OK
+2022-06-06 06:24:18.369 +00:00 [INF] Ping Education Controler  :   pong
+2022-06-06 06:24:18.373 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 06:28:46.819 +00:00 [INF] Starting Web Host
+2022-06-06 06:28:50.647 +00:00 [INF] Ping Skills Controler  :   pong
+2022-06-06 06:28:50.650 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 06:28:50.706 +00:00 [INF] Ping Jobs Controler :   pong
+2022-06-06 06:28:50.709 +00:00 [INF] Ping Response code :   OK
+2022-06-06 06:28:50.751 +00:00 [INF] Ping Education Controler  :   pong
+2022-06-06 06:28:50.754 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 06:30:08.001 +00:00 [INF] Starting Web Host
+2022-06-06 06:30:09.547 +00:00 [FTL] Host terminated unexpectedly
+System.ArgumentException: Duplicate health checks were registered with the name(s): skill_health_check (Parameter 'registrations')
+   at Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService.ValidateRegistrations(IEnumerable`1 registrations)
+   at Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService..ctor(IServiceScopeFactory scopeFactory, IOptions`1 options, ILogger`1 logger)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at WebApp.Program.Main(String[] args) in C:\Users\terry.namboya\source\repos\mrty63\ComposeTutorialApp\WebApp\Program.cs:line 31
+2022-06-06 06:31:19.892 +00:00 [INF] Starting Web Host
+2022-06-06 06:31:21.433 +00:00 [FTL] Host terminated unexpectedly
+System.ArgumentException: Duplicate health checks were registered with the name(s): skill_health_check (Parameter 'registrations')
+   at Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService.ValidateRegistrations(IEnumerable`1 registrations)
+   at Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService..ctor(IServiceScopeFactory scopeFactory, IOptions`1 options, ILogger`1 logger)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at WebApp.Program.Main(String[] args) in C:\Users\terry.namboya\source\repos\mrty63\ComposeTutorialApp\WebApp\Program.cs:line 31
+2022-06-06 06:34:01.221 +00:00 [INF] Starting Web Host
+2022-06-06 06:34:05.059 +00:00 [INF] Ping Skills Controler  :   pong
+2022-06-06 06:34:05.062 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 06:34:05.107 +00:00 [INF] Ping Jobs Controler :   pong
+2022-06-06 06:34:05.110 +00:00 [INF] Ping Response code :   OK
+2022-06-06 06:34:05.147 +00:00 [INF] Ping Education Controler  :   pong
+2022-06-06 06:34:05.150 +00:00 [INF] Ping Response code     :   OK
+2022-06-06 06:37:46.664 +00:00 [INF] Starting Web Host
+2022-06-06 06:43:21.551 +00:00 [INF] Starting Web Host
+2022-06-06 06:56:02.562 +00:00 [INF] Starting Web Host
+2022-06-06 07:01:57.420 +00:00 [INF] Education Controller is Healthy
+2022-06-06 07:01:57.421 +00:00 [INF] Education Controller is Healthy
+2022-06-06 07:01:57.580 +00:00 [INF] Education Controller is Healthy
+2022-06-06 07:01:57.583 +00:00 [INF] Education Controller is Healthy
+2022-06-06 07:09:10.531 +00:00 [INF] Starting Web Host
+2022-06-06 07:12:26.073 +00:00 [INF] Starting Web Host
+2022-06-06 07:12:37.711 +00:00 [INF] Skill Controller is Healthy
+2022-06-06 07:12:37.732 +00:00 [INF] Job Controller is Healthy
+2022-06-06 07:12:37.738 +00:00 [INF] Education Controller is Healthy
+2022-06-06 07:13:11.296 +00:00 [INF] Education Controller is Healthy
+2022-06-06 07:13:11.298 +00:00 [INF] Job Controller is Healthy
+2022-06-06 07:13:11.320 +00:00 [INF] Skill Controller is Healthy
+2022-06-06 10:19:13.760 +00:00 [INF] Starting Web Host
+2022-06-06 10:25:45.282 +00:00 [INF] Starting Web Host
+2022-06-06 10:31:38.312 +00:00 [INF] Starting Web Host
+2022-06-06 10:34:59.462 +00:00 [INF] Starting Web Host
+2022-06-06 16:08:05.182 +00:00 [INF] Starting Web Host
+2022-06-06 16:11:21.505 +00:00 [INF] Starting Web Host
+2022-06-06 16:14:37.301 +00:00 [INF] Starting Web Host
+2022-06-06 16:47:47.960 +00:00 [INF] Starting Web Host

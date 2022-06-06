@@ -59,6 +59,17 @@ namespace WebApi.Controllers
         {
            return Ok("pong");
         }
+        [HttpGet("GetAllJobs")]
+        public ActionResult<string> GetAllJobs()
+        {
+            var result = m_repo.GetAllJobs();
+            if (result != null)
+            {
+                return Ok(result);
+
+            }
+            return NotFound();
+        }
 
 
     }

@@ -73,8 +73,39 @@ namespace WebApp
 
 
         }
+        public static async Task<List<Job>> GetJobs(IHttpClientFactory clientFactory)
+        {
+            string strResult = null;
+            using (var client = clientFactory.CreateClient())
+            {
+                //var request = new System.Net.Http.HttpRequestMessage();
+                string uriString = "http://webapi/Jobs/GetAllJobs";
+                //request.RequestUri = new Uri(uriString);
+                //var response1 = await client.SendAsync(request);
+                HttpResponseMessage response2 = null;
+                response2 = await client.GetAsync(uriString);
+                if (!response2.IsSuccessStatusCode)
+                {
+                    return null;
+                }
 
+                strResult = await response2.Content.ReadAsStringAsync();
+
+
+
+            }
+
+            List<Job> listRes = JsonSerializer.Deserialize<List<Job>>(strResult);
+
+            return listRes;
+
+
+
+        }
     }
+    
+
 }
+
 
 

@@ -9,6 +9,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 //using System.Threading.Tasks;
 using CV;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.Pages
 {
@@ -35,8 +36,10 @@ namespace WebApp.Pages
         [BindProperty]
         public string m_edSchool { get; set; }
         [BindProperty]
+        [Required]
         public string m_edStart { get; set; }
         [BindProperty]
+        [Required]
         public string m_edEnd { get; set; }
         [BindProperty]
         public string m_edGrade { get; set; }

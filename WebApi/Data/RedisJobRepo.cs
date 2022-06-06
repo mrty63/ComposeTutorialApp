@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CV;
 using WebApi;
 using System.Text.Json;
+using Serilog;
 
 namespace WebApi.Data
 {
@@ -48,6 +49,25 @@ namespace WebApi.Data
         {
             return m_redis.GetServer(Constants.redisHost,Constants.redisPort).Keys(Constants.serverIdJob).Count();
             
+        }
+
+        string IJobRepo.GetAllJobs()
+        {
+            List<Job> listJob = new List<Job>();
+            string jsonString;
+            {
+                ;
+                var keys = m_redis.GetServer("redis", 6379).Keys(Constants.serverIdJob);
+                foreach (var key in keys)
+                {
+                    Job tempJob = JsonSerializer.Deserialize<Job>(m_db.StringGet(key));
+                    listJob.Add(tempJob);
+                }
+                jsonString = JsonSerializer.Serialize(listJob);
+                Log.Information($"List of {listJob.Count} Jobs made from redis");
+            }
+
+            return jsonString;
         }
     }
 }

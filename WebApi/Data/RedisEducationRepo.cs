@@ -22,7 +22,7 @@ namespace WebApi.Data
         }
         int IEducationRepo.CountExistingEducation()
         {
-            return m_redis.GetServer(Constants.redisHost, Constants.redisPort).Keys(Constants.serverIdJob).Count();
+            return m_redis.GetServer(Constants.redisHost, Constants.redisPort).Keys(Constants.serverIdEdu).Count();
         }
 
         void IEducationRepo.CreateEducation(Education inputEdu)

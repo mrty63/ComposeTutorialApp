@@ -102,7 +102,7 @@ namespace WebApp.Pages
             //var pingURI = new Uri($"http://webapi/Jobs/Ping/");
 
             //var pingResponse = await client. (pingURI.ToString(), jobstringJson);
-            Ping();
+            //Ping();
         }
         private async void Ping()
         {

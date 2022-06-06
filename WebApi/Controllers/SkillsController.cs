@@ -79,7 +79,7 @@ namespace WebApi.Controllers
         [HttpGet("Ping")]
         public ActionResult<string> Ping()
         {
-            
+            //return Forbid("no pong");
             return Ok("pong");
         }
 

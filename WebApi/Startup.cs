@@ -42,6 +42,7 @@ namespace WebApi
             services.AddScoped<ISkillRepo, RedisSkillRepo>();
             services.AddScoped<IJobRepo, RedisJobRepo>();
             services.AddScoped<IEducationRepo, RedisEducationRepo>();
+            services.AddHealthChecks();
         }
        
 
@@ -62,6 +63,7 @@ namespace WebApi
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHealthChecks("/health");
                 endpoints.MapControllers();
             });
         }

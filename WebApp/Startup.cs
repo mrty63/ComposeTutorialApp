@@ -14,6 +14,7 @@ using Polly;
 using System.Net.Http;
 using Polly.Extensions.Http;
 using Polly.Contrib.WaitAndRetry;
+using WebApp.HealthChecks;
 
 namespace WebApp
 {
@@ -42,6 +43,12 @@ namespace WebApp
                 .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
                 //.AddPolicyHandler(GetRetryPolicy());
                 .AddPolicyHandler(GetJitterRetryPolicy());
+
+            services.AddHealthChecks()
+                    .AddCheck<SkillHealthCheck>("skill_health_check")
+                    .AddCheck<JobHealthCheck>("job_health_check")
+                    .AddCheck<EducationHealthCheck>("Education_health_check");
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential 
@@ -79,6 +86,7 @@ namespace WebApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapHealthChecks("/health");
             });
         }
         private static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
