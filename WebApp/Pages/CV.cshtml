@@ -4,12 +4,13 @@
 }
 
 
-<h1></h1>
+<h1 class="jumbotron bg-secondary">Resum@("\u00E9")</h1>
 
 <p></p>
 
 <div>
-    <h3>Work History</h3>
+    <h2>Work History</h2>
+    <hr class="bg-light" />
     <div class="row">
         @{ 
             var JobStr = Model.GetJobs().Result;
@@ -17,22 +18,20 @@
             {
                 foreach (var item in JobStr)
                 {
-                    <div class="card m-sm-1 card-columns">
-                        <div class="card-body">
+                    <div class="card m-sm-2 mb-3 text-white bg-dark card-columns">
+                        <div class="card-body p-sm-1">
                             <div class="card-header">
                                 <h4> @item.m_title </h4>
-                                <h5> @item.m_company </h5>
+                                <h5 class="offset-2"> @item.m_company </h5>
                             </div>
                             <div class="card-body">
-                                <p> @item.m_start.ToShortDateString()</p>
+                                <p>Start     : @item.m_start.ToShortDateString()</p>
                                 @{
                                     if (item.m_end.HasValue)
                                     {
                                         <p class="flex-column">End     : @item.m_end.Value.ToShortDateString() </p>
                                     }
                                 }
-
-
                             </div>
                         </div>
                     </div>
@@ -42,7 +41,8 @@
     </div>
 </div>
 <div>
-    <h3>Skills</h3>
+    <h2>Skills</h2>
+    <hr class="bg-light" />
     <div class="row">
         @{
             var skStr = Model.GetSkills().Result;
@@ -51,10 +51,10 @@
             {
                 foreach (var entry in skStr)
                 {
-                    <div class="card m-sm-2 flex-sm-column">
-                        <div class="card-body">
-                            <h4 class="card-header"> @entry.m_name</h4>
-                            <p class="card-text">@entry.m_exp years</p>
+                    <div class="card m-sm-2 text-white bg-dark card-column mw-50">
+                        <div class="card-body p-sm-1">
+                            <h4 class="card-header"> @entry.m_name      </h4>
+                            <p class="card-text offset-2">@entry.m_exp years</p>
 
                         </div>
                     </div>
@@ -63,10 +63,11 @@
             }
         }
     </div>
-   
+
 </div>
 <div>
-    <h3>Education</h3>
+    <h2>Education</h2>
+    <hr class="bg-light" />
     <div class="row">
         @{
             var eduStr = Model.GetEducation().Result;
@@ -77,8 +78,8 @@
 
                 foreach (var entry in eduStr)
                 {
-                    <div class="card col m-sm-1 flex-sm-column">
-                        <div class="card-body">
+                    <div class="card m-sm-2 text-white bg-dark card-column">
+                        <div class="card-body p-sm-2">
                             <div class="card-header">
 
                                 <h5 class=" card-title"> @entry.m_title</h5>
@@ -86,13 +87,13 @@
                             </div>
                             <div class="card-text">
 
-                                <p class="">@entry.m_grade </p>
+                                <p class="offset-2">Grade:  @entry.m_grade </p>
                                 <div class="row">
-                                    <p class="flex-column">Start   : @entry.m_start.ToShortDateString() years   </p>
+                                    <p class="col-auto">Start   : @entry.m_start.ToShortDateString() years   </p>
                                     @{
                                         if (entry.m_end > entry.m_start)
                                         {
-                                            <p class="flex-column">End     : @entry.m_end.ToShortDateString() </p>
+                                            <p class="col-auto">End     : @entry.m_end.ToShortDateString() </p>
                                         }
                                     }
                                 </div>
@@ -106,5 +107,5 @@
             }
         }
     </div>
-    
+
 </div>

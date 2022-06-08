@@ -1,16 +1,37 @@
 ﻿body {
+    /*background-color: rgb(58, 58, 58);
+    color: white;*/
+    font-family: 'Nunito', sans-serif;
 }
-#bg {
+h1 {
+    /*color: whitesmoke;
+    text-align: center;
+    border-bottom: 4px solid rgb(23, 122, 232);
+    border-radius: 15%;*/
+}
+/*#bg {*/
     /* The image used */
-    background-image: url('~/images/blueBuilding.jpg');
-    background-size: auto;
+    /*background-image: url('~/images/blueBuilding.jpg');
+    background-size: auto;*/
     /*background-image: url('file:///C:\Users\terry.namboya\source\repos\ComposeTutorialApp\WebApp\wwwroot\images\blueBuilding.jpg');*/
     /* Full height */
     /*height: 100%;*/
     /* Center and scale the image nicely */
     /* background-position: center;*/
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     /*background-attachment: local;*/
     /*background-size: contain;*/
     /*background-size: 50% 50%;*/
+/*}*/
+#MainIndex {
+    /*background-image: url("../Images/bluebuilding_med.jpg");*/
+    /*background-image: url("../images/blueBuilding.jpg");*/
+    /*background-image: url("../images/MOON.jpg");*/
+    background-image: url("../images/TRAIN.jpg");
+    background-size: cover;
+    background-origin: border-box;
+    background-attachment:local;
+    background-position-y: top;
+    /*background-position-X: left;*/
+    min-height: 600px;
 }
