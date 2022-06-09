@@ -1,11 +1,13 @@
 ﻿@page
 @model WebApp.Pages.AddItemModel
 @{
+    ViewData["Title"] = "Add Items";
+
 }
 <div class="d-grid gap-2 d-md-block align-items-center mx-auto">
     <div class="flex-lg-column">
         <div class="text-center">
-            <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#selectorModal">Enter Job</button>
+            <button type="button" class="btn bg-light btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#selectorModal">Enter Job</button>
 
         </div>
 
@@ -67,7 +69,7 @@
     </div>
     <div>
         <div class="text-center">
-            <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#skillModal">Enter Skill</button>
+            <button type="button" class="btn btn-outline-danger btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#skillModal">Enter Skill</button>
 
         </div>
 
@@ -113,7 +115,7 @@
     </div>
     <div class="flex-lg-column align-self-center">
         <div class="text-center">
-            <button type="button" class="btn btn-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#eduModal">Enter Education</button>
+            <button type="button" class="btn btn-outline-info btn-lg m-3 col-6 mx-auto" data-toggle="modal" data-target="#eduModal">Enter Education</button>
         </div>
 
         <div class="modal fade" id="eduModal" role="dialog">

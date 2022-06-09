@@ -35,3 +35,21 @@ h1 {
     /*background-position-X: left;*/
     min-height: 600px;
 }
+
+.HighlightWhiteText {
+    background: rgba(1, 1, 1, 0.3);
+}
+
+.fitContent{
+    width: fit-content;
+}
+.footer {
+    background: rgba(0, 0, 0, 0.5);
+}
+footer > .container {
+    color: white;
+}
+a{
+    color: rgb(79 115 255);
+
+}

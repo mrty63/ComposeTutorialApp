@@ -1,0 +1,274 @@
+2022-06-09 08:54:41.999 +00:00 [INF] Starting Web Host
+2022-06-09 08:54:43.968 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 08:54:43.975 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 08:54:43.978 +00:00 [INF] Hosting environment: Development
+2022-06-09 08:54:43.981 +00:00 [INF] Content root path: /app
+2022-06-09 08:54:55.795 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - -
+2022-06-09 08:54:55.864 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 08:54:55.890 +00:00 [INF] Route matched with {action = "GetAllJobs", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllJobs() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-09 08:54:56.278 +00:00 [INF] List of 0 Jobs made from redis
+2022-06-09 08:54:56.289 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 08:54:56.308 +00:00 [INF] Executed action WebApi.Controllers.JobsController.GetAllJobs (WebApi) in 410.4396ms
+2022-06-09 08:54:56.314 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 08:54:56.319 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - - - 200 - text/plain;+charset=utf-8 526.7298ms
+2022-06-09 08:54:56.359 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-09 08:54:56.367 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 08:54:56.371 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-09 08:54:56.378 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-09 08:54:56.383 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 9.0702ms
+2022-06-09 08:54:56.386 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 08:54:56.389 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 2 text/plain;+charset=utf-8 29.8345ms
+2022-06-09 08:54:56.397 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-09 08:54:56.402 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 08:54:56.406 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-09 08:54:56.409 +00:00 [INF] Redis Education Repo Started
+2022-06-09 08:54:56.415 +00:00 [INF] List of 0 Education made from redis
+2022-06-09 08:54:56.418 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 08:54:56.421 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 12.1026ms
+2022-06-09 08:54:56.423 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 08:54:56.427 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 29.9347ms
+2022-06-09 08:56:51.964 +00:00 [INF] Starting Web Host
+2022-06-09 08:56:53.367 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 08:56:53.373 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 08:56:53.376 +00:00 [INF] Hosting environment: Development
+2022-06-09 08:56:53.378 +00:00 [INF] Content root path: /app
+2022-06-09 08:58:02.333 +00:00 [INF] Starting Web Host
+2022-06-09 08:58:03.440 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 08:58:03.446 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 08:58:03.449 +00:00 [INF] Hosting environment: Development
+2022-06-09 08:58:03.451 +00:00 [INF] Content root path: /app
+2022-06-09 08:59:45.086 +00:00 [INF] Starting Web Host
+2022-06-09 08:59:46.551 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 08:59:46.558 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 08:59:46.561 +00:00 [INF] Hosting environment: Development
+2022-06-09 08:59:46.564 +00:00 [INF] Content root path: /app
+2022-06-09 09:00:54.545 +00:00 [INF] Starting Web Host
+2022-06-09 09:00:55.929 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:00:55.935 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:00:55.937 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:00:55.940 +00:00 [INF] Content root path: /app
+2022-06-09 09:01:51.328 +00:00 [INF] Starting Web Host
+2022-06-09 09:01:52.743 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:01:52.750 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:01:52.752 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:01:52.755 +00:00 [INF] Content root path: /app
+2022-06-09 09:02:28.205 +00:00 [INF] Starting Web Host
+2022-06-09 09:02:29.588 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:02:29.596 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:02:29.599 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:02:29.603 +00:00 [INF] Content root path: /app
+2022-06-09 09:03:15.897 +00:00 [INF] Starting Web Host
+2022-06-09 09:03:17.305 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:03:17.310 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:03:17.313 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:03:17.316 +00:00 [INF] Content root path: /app
+2022-06-09 09:04:16.467 +00:00 [INF] Starting Web Host
+2022-06-09 09:04:17.641 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:04:17.647 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:04:17.649 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:04:17.651 +00:00 [INF] Content root path: /app
+2022-06-09 09:05:35.191 +00:00 [INF] Starting Web Host
+2022-06-09 09:05:36.602 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:05:36.610 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:05:36.614 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:05:36.616 +00:00 [INF] Content root path: /app
+2022-06-09 09:06:23.841 +00:00 [INF] Starting Web Host
+2022-06-09 09:06:25.267 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:06:25.273 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:06:25.276 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:06:25.279 +00:00 [INF] Content root path: /app
+2022-06-09 09:07:20.328 +00:00 [INF] Starting Web Host
+2022-06-09 09:07:21.651 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:07:21.657 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:07:21.660 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:07:21.664 +00:00 [INF] Content root path: /app
+2022-06-09 09:10:13.165 +00:00 [INF] Starting Web Host
+2022-06-09 09:10:14.535 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:10:14.543 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:10:14.546 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:10:14.549 +00:00 [INF] Content root path: /app
+2022-06-09 09:11:01.820 +00:00 [INF] Starting Web Host
+2022-06-09 09:11:03.204 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:11:03.210 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:11:03.213 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:11:03.215 +00:00 [INF] Content root path: /app
+2022-06-09 09:20:34.055 +00:00 [INF] Starting Web Host
+2022-06-09 09:20:35.412 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:20:35.420 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:20:35.424 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:20:35.428 +00:00 [INF] Content root path: /app
+2022-06-09 09:23:07.800 +00:00 [INF] Starting Web Host
+2022-06-09 09:23:09.222 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:23:09.249 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:23:09.252 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:23:09.255 +00:00 [INF] Content root path: /app
+2022-06-09 09:25:05.820 +00:00 [INF] Starting Web Host
+2022-06-09 09:25:07.135 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:25:07.143 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:25:07.146 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:25:07.148 +00:00 [INF] Content root path: /app
+2022-06-09 09:28:51.202 +00:00 [INF] Starting Web Host
+2022-06-09 09:28:52.713 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 09:28:52.719 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 09:28:52.722 +00:00 [INF] Hosting environment: Development
+2022-06-09 09:28:52.726 +00:00 [INF] Content root path: /app
+2022-06-09 15:39:37.759 +00:00 [INF] Starting Web Host
+2022-06-09 15:39:39.559 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 15:39:39.566 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 15:39:39.570 +00:00 [INF] Hosting environment: Development
+2022-06-09 15:39:39.573 +00:00 [INF] Content root path: /app
+2022-06-09 15:39:43.356 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - -
+2022-06-09 15:39:43.430 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 15:39:43.458 +00:00 [INF] Route matched with {action = "GetAllJobs", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllJobs() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-09 15:39:43.858 +00:00 [INF] List of 0 Jobs made from redis
+2022-06-09 15:39:43.870 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 15:39:43.888 +00:00 [INF] Executed action WebApi.Controllers.JobsController.GetAllJobs (WebApi) in 423.2627ms
+2022-06-09 15:39:43.896 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 15:39:43.901 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - - - 200 - text/plain;+charset=utf-8 548.3728ms
+2022-06-09 15:39:43.938 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-09 15:39:43.944 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 15:39:43.950 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-09 15:39:43.956 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-09 15:39:43.962 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 9.8209ms
+2022-06-09 15:39:43.964 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 15:39:43.968 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 2 text/plain;+charset=utf-8 29.8128ms
+2022-06-09 15:39:43.975 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-09 15:39:43.979 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 15:39:43.984 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-09 15:39:43.988 +00:00 [INF] Redis Education Repo Started
+2022-06-09 15:39:43.995 +00:00 [INF] List of 0 Education made from redis
+2022-06-09 15:39:43.998 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 15:39:44.001 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 13.575ms
+2022-06-09 15:39:44.005 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 15:39:44.008 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 33.1812ms
+2022-06-09 15:39:50.405 +00:00 [INF] Request starting HTTP/1.1 POST http://webapi/Skills/CreateSkill/ application/json;+charset=utf-8 -
+2022-06-09 15:39:50.410 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.CreateSkillForm (WebApi)'
+2022-06-09 15:39:50.424 +00:00 [INF] Route matched with {action = "CreateSkillForm", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[CV.Skill] CreateSkillForm(System.String) on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-09 15:39:50.465 +00:00 [INF] Executing CreatedResult, writing value of type 'System.Boolean'.
+2022-06-09 15:39:50.475 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.CreateSkillForm (WebApi) in 47.5601ms
+2022-06-09 15:39:50.478 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.CreateSkillForm (WebApi)'
+2022-06-09 15:39:50.481 +00:00 [INF] Request finished HTTP/1.1 POST http://webapi/Skills/CreateSkill/ application/json;+charset=utf-8 - - 201 - application/json;+charset=utf-8 76.1343ms
+2022-06-09 15:39:53.634 +00:00 [INF] Request starting HTTP/1.1 POST http://webapi/Skills/CreateSkill/ application/json;+charset=utf-8 -
+2022-06-09 15:39:53.637 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.CreateSkillForm (WebApi)'
+2022-06-09 15:39:53.640 +00:00 [INF] Route matched with {action = "CreateSkillForm", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[CV.Skill] CreateSkillForm(System.String) on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-09 15:39:53.649 +00:00 [INF] Executing CreatedResult, writing value of type 'System.Boolean'.
+2022-06-09 15:39:53.653 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.CreateSkillForm (WebApi) in 9.908ms
+2022-06-09 15:39:53.657 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.CreateSkillForm (WebApi)'
+2022-06-09 15:39:53.660 +00:00 [INF] Request finished HTTP/1.1 POST http://webapi/Skills/CreateSkill/ application/json;+charset=utf-8 - - 201 - application/json;+charset=utf-8 26.2446ms
+2022-06-09 15:39:54.593 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - -
+2022-06-09 15:39:54.598 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 15:39:54.602 +00:00 [INF] Route matched with {action = "GetAllJobs", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllJobs() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-09 15:39:54.608 +00:00 [INF] List of 0 Jobs made from redis
+2022-06-09 15:39:54.611 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 15:39:54.614 +00:00 [INF] Executed action WebApi.Controllers.JobsController.GetAllJobs (WebApi) in 7.7664ms
+2022-06-09 15:39:54.617 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 15:39:54.620 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - - - 200 - text/plain;+charset=utf-8 27.1592ms
+2022-06-09 15:39:54.628 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-09 15:39:54.632 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 15:39:54.635 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-09 15:39:54.651 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-09 15:39:54.654 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 15.9771ms
+2022-06-09 15:39:54.657 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 15:39:54.661 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 32.2095ms
+2022-06-09 15:39:54.676 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-09 15:39:54.681 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 15:39:54.683 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-09 15:39:54.686 +00:00 [INF] Redis Education Repo Started
+2022-06-09 15:39:54.690 +00:00 [INF] List of 0 Education made from redis
+2022-06-09 15:39:54.693 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 15:39:54.696 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 9.5836ms
+2022-06-09 15:39:54.700 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 15:39:54.703 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 27.0564ms
+2022-06-09 15:42:08.074 +00:00 [INF] Starting Web Host
+2022-06-09 15:42:09.477 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 15:42:09.484 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 15:42:09.487 +00:00 [INF] Hosting environment: Development
+2022-06-09 15:42:09.491 +00:00 [INF] Content root path: /app
+2022-06-09 15:42:13.313 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - -
+2022-06-09 15:42:13.386 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 15:42:13.407 +00:00 [INF] Route matched with {action = "GetAllJobs", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllJobs() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-09 15:42:13.752 +00:00 [INF] List of 0 Jobs made from redis
+2022-06-09 15:42:13.764 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 15:42:13.781 +00:00 [INF] Executed action WebApi.Controllers.JobsController.GetAllJobs (WebApi) in 366.5172ms
+2022-06-09 15:42:13.787 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 15:42:13.793 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - - - 200 - text/plain;+charset=utf-8 482.3538ms
+2022-06-09 15:42:13.829 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-09 15:42:13.835 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 15:42:13.840 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-09 15:42:13.867 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-09 15:42:13.872 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 29.3218ms
+2022-06-09 15:42:13.876 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 15:42:13.880 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 50.1928ms
+2022-06-09 15:42:13.893 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-09 15:42:13.898 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 15:42:13.902 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-09 15:42:13.905 +00:00 [INF] Redis Education Repo Started
+2022-06-09 15:42:13.911 +00:00 [INF] List of 0 Education made from redis
+2022-06-09 15:42:13.914 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 15:42:13.917 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 12.7526ms
+2022-06-09 15:42:13.920 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 15:42:13.923 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 29.2692ms
+2022-06-09 16:53:53.791 +00:00 [INF] Starting Web Host
+2022-06-09 16:53:55.215 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 16:53:55.222 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 16:53:55.226 +00:00 [INF] Hosting environment: Development
+2022-06-09 16:53:55.228 +00:00 [INF] Content root path: /app
+2022-06-09 17:09:17.329 +00:00 [INF] Starting Web Host
+2022-06-09 17:09:18.691 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 17:09:18.700 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 17:09:18.703 +00:00 [INF] Hosting environment: Development
+2022-06-09 17:09:18.706 +00:00 [INF] Content root path: /app
+2022-06-09 17:13:28.925 +00:00 [INF] Starting Web Host
+2022-06-09 17:13:30.334 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 17:13:30.344 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 17:13:30.346 +00:00 [INF] Hosting environment: Development
+2022-06-09 17:13:30.349 +00:00 [INF] Content root path: /app
+2022-06-09 17:14:44.911 +00:00 [INF] Starting Web Host
+2022-06-09 17:14:46.349 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 17:14:46.355 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 17:14:46.358 +00:00 [INF] Hosting environment: Development
+2022-06-09 17:14:46.362 +00:00 [INF] Content root path: /app
+2022-06-09 17:18:08.574 +00:00 [INF] Starting Web Host
+2022-06-09 17:18:09.979 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 17:18:09.986 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 17:18:09.989 +00:00 [INF] Hosting environment: Development
+2022-06-09 17:18:09.993 +00:00 [INF] Content root path: /app
+2022-06-09 17:23:56.240 +00:00 [INF] Starting Web Host
+2022-06-09 17:23:57.652 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 17:23:57.658 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 17:23:57.662 +00:00 [INF] Hosting environment: Development
+2022-06-09 17:23:57.664 +00:00 [INF] Content root path: /app
+2022-06-09 17:26:00.904 +00:00 [INF] Starting Web Host
+2022-06-09 17:26:02.308 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 17:26:02.315 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 17:26:02.317 +00:00 [INF] Hosting environment: Development
+2022-06-09 17:26:02.321 +00:00 [INF] Content root path: /app
+2022-06-09 17:27:58.486 +00:00 [INF] Starting Web Host
+2022-06-09 17:27:59.944 +00:00 [INF] Now listening on: http://[::]:80
+2022-06-09 17:27:59.952 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-09 17:27:59.954 +00:00 [INF] Hosting environment: Development
+2022-06-09 17:27:59.957 +00:00 [INF] Content root path: /app
+2022-06-09 17:30:02.378 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - -
+2022-06-09 17:30:02.447 +00:00 [INF] Executing endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 17:30:02.474 +00:00 [INF] Route matched with {action = "GetAllJobs", controller = "Jobs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllJobs() on controller WebApi.Controllers.JobsController (WebApi).
+2022-06-09 17:30:02.807 +00:00 [INF] List of 0 Jobs made from redis
+2022-06-09 17:30:02.817 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 17:30:02.836 +00:00 [INF] Executed action WebApi.Controllers.JobsController.GetAllJobs (WebApi) in 354.5123ms
+2022-06-09 17:30:02.842 +00:00 [INF] Executed endpoint 'WebApi.Controllers.JobsController.GetAllJobs (WebApi)'
+2022-06-09 17:30:02.849 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Jobs/GetAllJobs - - - 200 - text/plain;+charset=utf-8 472.4141ms
+2022-06-09 17:30:02.891 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Skills/GetAllSkills - -
+2022-06-09 17:30:02.900 +00:00 [INF] Executing endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 17:30:02.905 +00:00 [INF] Route matched with {action = "GetAllSkills", controller = "Skills"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAllSkills() on controller WebApi.Controllers.SkillsController (WebApi).
+2022-06-09 17:30:02.929 +00:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2022-06-09 17:30:02.934 +00:00 [INF] Executed action WebApi.Controllers.SkillsController.GetAllSkills (WebApi) in 26.9415ms
+2022-06-09 17:30:02.937 +00:00 [INF] Executed endpoint 'WebApi.Controllers.SkillsController.GetAllSkills (WebApi)'
+2022-06-09 17:30:02.940 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Skills/GetAllSkills - - - 200 68 text/plain;+charset=utf-8 48.0686ms
+2022-06-09 17:30:02.954 +00:00 [INF] Request starting HTTP/1.1 GET http://webapi/Education/GetAllEducation - -
+2022-06-09 17:30:02.959 +00:00 [INF] Executing endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 17:30:02.964 +00:00 [INF] Route matched with {action = "GetAllEducation", controller = "Education"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetAllEducation() on controller WebApi.Controllers.EducationController (WebApi).
+2022-06-09 17:30:02.967 +00:00 [INF] Redis Education Repo Started
+2022-06-09 17:30:02.973 +00:00 [INF] List of 0 Education made from redis
+2022-06-09 17:30:02.975 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-06-09 17:30:02.978 +00:00 [INF] Executed action WebApi.Controllers.EducationController.GetAllEducation (WebApi) in 11.1955ms
+2022-06-09 17:30:02.981 +00:00 [INF] Executed endpoint 'WebApi.Controllers.EducationController.GetAllEducation (WebApi)'
+2022-06-09 17:30:02.984 +00:00 [INF] Request finished HTTP/1.1 GET http://webapi/Education/GetAllEducation - - - 200 - text/plain;+charset=utf-8 29.8713ms
